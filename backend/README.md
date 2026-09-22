@@ -257,7 +257,7 @@ Frontend integration: `index.html` → `DownloaderService.prepare()` calls
   returns honest 502s.
 - In-memory job store (stateless across restarts; no DB by design).
 - Single-instance concurrency gate; distributed queue is future work.
-- No deployment (later phase).
+- Deployment: Railway only — see `../DEPLOY.md` (Dockerfile at `backend/Dockerfile`, health check `/api/health`).
 
 ## Phase 6 — quality gates
 

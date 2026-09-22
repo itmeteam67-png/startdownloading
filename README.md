@@ -16,26 +16,27 @@ npm test               # security + quality + E2E (needs internet for real-downl
 npm start              # http://localhost:3001 (serves the frontend too)
 ```
 
-## Production (Render / Railway / Fly.io + startdownloading.com)
+## Production (Railway + startdownloading.com)
 
 1. Push this repo to GitHub (see below).
-2. Create a Docker service from this repo:
-   - Dockerfile: `backend/Dockerfile` (build from repo root)
+2. In Railway, create a service from this repo:
+   - Builder: Dockerfile at `backend/Dockerfile` (build context: repo root)
    - Health check path: `/api/health`
-   - `render.yaml` is included as a Render blueprint.
-3. Set environment variables in the provider dashboard (never commit `.env`):
+3. Set environment variables in the Railway service Variables panel
+   (never commit `.env`):
 
    | Variable | Production value |
    | -------- | ---------------- |
    | `NODE_ENV` | `production` |
-   | `PORT` | provided by host (Render sets `$PORT` automatically) |
+   | `PORT` | provided by Railway (`$PORT`) — do not set manually |
    | `CORS_ORIGINS` | `https://startdownloading.com` only |
    | `YTDLP_BIN` | `yt-dlp` |
    | `TEMP_DIR` | `./temp` |
 
-4. Point DNS for `startdownloading.com` at the provider (see provider's
-   "Custom Domain" panel for the exact `A`/`CNAME` values — do not invent them),
-   then verify `https://startdownloading.com/api/health` → `{ "ok": true }`.
+4. In the Railway service Settings → Domains panel, add the custom domain
+   `startdownloading.com` and follow Railway's DNS instructions for the exact
+   `A`/`CNAME` values (do not invent them), then verify
+   `https://startdownloading.com/api/health` → `{ "ok": true }`.
 
 Full details: `DEPLOY.md`. Security model: `SECURITY.md`.
 
