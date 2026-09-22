@@ -714,7 +714,12 @@ a{text-decoration:none}
   var state = { url: '', detectedPlatform: 'unknown', validationError: '', status: 'IDLE', loading: false };
 
   var form = document.getElementById('dlForm');
-  var bar = form.querySelector('.downloader');
+  // NOTE: #dlForm IS the `.downloader` bar itself (see markup:
+  // <form class="downloader" id="dlForm">). querySelector() only searches
+  // descendants, so form.querySelector('.downloader') is always null and
+  // every bar.classList access in clearError()/setInvalid()/handleSubmit()
+  // threw "Cannot read properties of null". Bind directly to the form.
+  var bar = form;
   var input = document.getElementById('urlInput');
   var btn = document.getElementById('dlBtn');
   var btnLabel = btn.querySelector('.btn-dl-label');
@@ -765,16 +770,20 @@ a{text-decoration:none}
   function setInvalid(message) {
     state.validationError = message;
     input.setAttribute('aria-invalid', 'true');
-    bar.classList.remove('is-empty');
-    bar.classList.add('has-error');
+    if (bar) {
+      bar.classList.remove('is-empty');
+      bar.classList.add('has-error');
+    }
     setStatus('ERROR', message, 'error');
   }
 
   function clearError() {
     state.validationError = '';
     input.setAttribute('aria-invalid', 'false');
-    bar.classList.remove('has-error');
-    bar.classList.remove('is-empty');
+    if (bar) {
+      bar.classList.remove('has-error');
+      bar.classList.remove('is-empty');
+    }
   }
 
   function validate(rawValue) {
@@ -905,7 +914,7 @@ a{text-decoration:none}
       setInvalid(friendlyError(code));
     } else {
       input.setAttribute('aria-invalid', 'false');
-      bar.classList.remove('has-error');
+      if (bar) bar.classList.remove('has-error');
       setStatus('ERROR', friendlyError(code), 'error');
     }
     showChip('unknown');
@@ -969,11 +978,15 @@ a{text-decoration:none}
     if (!result.ok) {
       if (result.error === 'empty') {
         clearError();
-        bar.classList.add('has-error');
-        setStatus('ERROR', 'Please paste a video link first.', 'error');
-        bar.classList.remove('is-empty');
-        void bar.offsetWidth;
-        bar.classList.add('is-empty');
+        if (bar) {
+          bar.classList.add('has-error');
+          setStatus('ERROR', 'Please paste a video link first.', 'error');
+          bar.classList.remove('is-empty');
+          void bar.offsetWidth;
+          bar.classList.add('is-empty');
+        } else {
+          setStatus('ERROR', 'Please paste a video link first.', 'error');
+        }
       } else if (result.error === 'invalid') {
         setInvalid('That link doesn\u2019t look like a valid URL. Please check it and try again.');
       } else {
