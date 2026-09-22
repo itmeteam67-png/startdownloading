@@ -1,6 +1,5 @@
 User-agent: *
 Allow: /
-Disallow: /api/
-Disallow: /backend/
+
 
 Sitemap: https://startdownloading.com/sitemap.xml
