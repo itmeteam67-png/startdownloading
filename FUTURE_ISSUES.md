@@ -39,3 +39,22 @@ deployment; all are tracked here instead of being fixed now.
 - **Recommended action (post-MVP):** when scaling past one instance,
   re-audit `MAX_CONCURRENT_JOBS` and rate limits per replica or introduce a
   shared coordinator. No change needed while single-instance.
+
+## F-3. OUTPUT_TOO_LARGE (413) path has no live end-to-end coverage — NOT CRITICAL
+
+- **Location:** `backend/src/services/downloadEngine.js:199-201`
+  (`stat.size > config.maxDownloadBytes` → 413) and `--max-filesize`
+  pre-filter (`downloadEngine.js:93`).
+- **Finding (validated live 2026-09-22):** with a 5MB cap against a ~14.8MB
+  144p fixture, yt-dlp's `--max-filesize` pre-filter refuses the download
+  before any transfer, so the request fails closed with a controlled
+  422/502 instead of reaching the post-download 413 guard. Oversized output
+  therefore can never leak — but the 413 branch itself was verified by code
+  inspection only, never executed. Drive-by observation: a cap-induced
+  refusal is currently classified as `PRIVATE_CONTENT`, whose message
+  ("isn't publicly downloadable") is slightly misleading for a size-limit
+  refusal — cosmetic, still sanitized and fail-closed.
+- **Recommended action (post-MVP):** add a unit test that seeds an
+  oversized file in `TEMP_DIR` past the engine step (or a test-only size
+  hook) to execute the 413 branch; optionally map max-filesize refusals to
+  `OUTPUT_TOO_LARGE` for message accuracy.
