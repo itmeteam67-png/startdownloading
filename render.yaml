@@ -1,0 +1,18 @@
+# Render blueprint for StartDownloading (Docker + Node 22 + yt-dlp + ffmpeg).
+# Build is defined by backend/Dockerfile (run from repo root).
+services:
+  - type: web
+    name: startdownloading
+    runtime: docker
+    dockerfilePath: backend/Dockerfile
+    dockerContext: .
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: CORS_ORIGINS
+        value: https://startdownloading.com
+      - key: YTDLP_BIN
+        value: yt-dlp
+      - key: TEMP_DIR
+        value: ./temp

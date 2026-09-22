@@ -1,0 +1,30 @@
+{
+  "name": "startdownloading-backend",
+  "version": "0.1.0",
+  "private": true,
+  "description": "StartDownloading backend API + download engine (Phase 4)",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node src/server.js",
+    "test": "node tests/runTests.js && node tests/runPhase6Tests.js && node tests/runE2E.js",
+    "test:security": "node tests/runTests.js",
+    "test:security2": "node tests/runSecurityAudit.js",
+    "test:quality": "node tests/runPhase6Tests.js",
+    "test:e2e": "node tests/runE2E.js",
+    "test:site": "node tests/runSiteAudit.js",
+    "test:footer": "node tests/runFooterTests.js",
+    "test:local": "node tests/runLocalDownload.js"
+  },
+  "dependencies": {
+    "compression": "^1.8.2",
+    "cors": "^2.8.5",
+    "dotenv": "^17.4.2",
+    "express": "^4.19.2",
+    "express-rate-limit": "^7.2.0",
+    "helmet": "^7.1.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

@@ -1,0 +1,20 @@
+# Dependencies
+node_modules/
+backend/node_modules/
+
+# Secrets — never commit
+.env
+.env.local
+.env.production
+backend/.env
+
+# Runtime / media / logs
+backend/temp/
+*.log
+logs/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
