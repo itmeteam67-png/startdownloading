@@ -81,6 +81,16 @@ async function runYtdlp({ url, platform, jobId, log, formatSelector, needsMerge 
     '--socket-timeout', '20',
     '--retries', '1',
   ];
+   const args = [
+  '--no-playlist',
+  '--no-cookies',
+  '--no-cache-dir',
+  '--no-mtime',
+  '--socket-timeout', '20',
+  '--retries', '1',
+];
+if (config.proxyUrl) args.push('--proxy', config.proxyUrl);   // ⬅️ هادي السطر الجديد
+if (config.ffmpegLocation) args.push('--ffmpeg-location', config.ffmpegLocation);
   if (config.ffmpegLocation) args.push('--ffmpeg-location', config.ffmpegLocation);
   // Phase 7: when a validated formatId was selected, it (and only it)
   // determines the media. Video-only selections are merged with the best
