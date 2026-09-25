@@ -17,7 +17,7 @@ const path = require('path');
 const { spawn } = require('child_process');
 const config = require('../config');
 const { newJobId, safeFilename, safeTitleFilename } = require('../utils/ids');
-const { platformFormat, classifyEngineFailure } = require('../platforms');
+const { platformFormat, classifyEngineFailure, sanitizeEngineStderr } = require('../platforms');
 const jobStore = require('./jobStore');
 
 const ALLOWED_EXTENSIONS = new Set(['mp4', 'webm', 'mkv', 'mov', 'm4a', 'mp3']);
@@ -148,7 +148,14 @@ async function runYtdlp({ url, platform, jobId, log, formatSelector, needsMerge 
       } else {
         const mergeErr = classifyMergeFailure(stderr.slice(-800));
         if (mergeErr && needsMerge) { finish(mergeErr); return; }
-        const c = classifyEngineFailure(stderr.slice(-800));
+        const tail800 = stderr.slice(-800);
+        const c = classifyEngineFailure(tail800);
+        // Sanitized diagnostic (no cookies/credentials/tokens/URLs): exposes
+        // the real engine failure in deploy logs so upstream rejections are
+        // never again mistaken for private content.
+        try {
+          log(`engine failed platform=${platform} exitCode=${code} category=${c.code} stderr=${sanitizeEngineStderr(tail800)}`);
+        } catch (e) { /* logging must never break the error path */ }
         finish(engineError(c.code, c.message, c.status));
       }
     });

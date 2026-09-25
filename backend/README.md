@@ -152,7 +152,8 @@ Error — status varies:
 | ---- | ---- | ------- |
 | 400 | INVALID_REQUEST / INVALID_URL | missing / malformed URL, bad Content-Type (415), bad port/credentials/scheme |
 | 422 | UNSUPPORTED_PLATFORM | unknown host, SSRF-blocked, engine-reported unsupported |
-| 422 | PRIVATE_CONTENT | login-walled, private, DRM/premium/age-gated — never bypassed |
+| 422 | PRIVATE_CONTENT | genuinely private, login-walled, DRM/premium/age-gated — never bypassed |
+| 502 | UPSTREAM_REJECTED | platform refused our server (bot-check, HTTP 403/429, rate limit) — never mislabeled as private |
 | 413 | OUTPUT_TOO_LARGE | output exceeded `MAX_DOWNLOAD_BYTES` |
 | 429 | RATE_LIMITED | per-IP budget spent or server at `MAX_CONCURRENT_JOBS` |
 | 502 | PROCESSING_FAILED / NETWORK_ERROR | engine failed, missing, or platform unreachable |
@@ -208,7 +209,8 @@ matches the real CDN/font/image inventory, content pages carry their own
 - SSRF: hostname + resolved-IP checks (loopback incl. `::1`, private v4/v6,
   link-local, `169.254.169.254`, `localhost`, `.internal`/`.local` refused).
   Redirect note: the engine follows platform redirects internally with TLS
-  verification ON; restricted targets fail closed (PRIVATE_CONTENT), never bypassed.
+   verification ON; restricted targets fail closed (PRIVATE_CONTENT), upstream
+   rejections fail closed as UPSTREAM_REJECTED (never mislabeled private), never bypassed.
 - No shell: `spawn(bin, [args…, url])` with `shell: false`; fail-closed
   `YTDLP_BIN` allow-list (bare name or absolute path); no user flags/paths.
 - helmet headers, CORS allowlist (`CORS_ORIGINS`), 32kb JSON body cap +

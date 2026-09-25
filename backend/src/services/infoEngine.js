@@ -11,7 +11,7 @@
 const crypto = require('crypto');
 const { spawn } = require('child_process');
 const config = require('../config');
-const { classifyEngineFailure } = require('../platforms');
+const { classifyEngineFailure, sanitizeEngineStderr } = require('../platforms');
 const { shutdownChildrenTracking } = require('./spawnTracker');
 
 const INFO_TIMEOUT_MS = Math.min(90000, config.downloadTimeoutMs || 90000);
@@ -116,10 +116,23 @@ function runInfoDump({ url, requestId }) {
           finish(engineError('PROCESSING_FAILED', 'We couldn\u2019t analyze this video. Please try again.', 502));
         }
       } else {
-        const c = classifyEngineFailure(stderr.slice(-800));
+        const tail800 = stderr.slice(-800);
+        const c = classifyEngineFailure(tail800);
+        // Sanitized diagnostic (no cookies/credentials/tokens/URLs): exposes
+        // the real engine failure in deploy logs so upstream rejections are
+        // never again mistaken for private content.
+        try {
+          console.log(JSON.stringify({ ts: new Date().toISOString(), req: requestId || null, scope: 'infoEngine', msg: 'engine failed', exitCode: code, category: c.code, stderr: sanitizeEngineStderr(tail800) }));
+        } catch (e) { /* logging must never break the error path */ }
         if (c.code === 'UNSUPPORTED_PLATFORM') {
           finish(engineError(c.code, c.message, c.status));
         } else if (c.code === 'PRIVATE_CONTENT') {
+          finish(engineError(c.code, c.message, c.status));
+        } else if (c.code === 'UPSTREAM_REJECTED') {
+          finish(engineError(c.code, c.message, c.status));
+        } else if (c.code === 'OUTPUT_TOO_LARGE') {
+          finish(engineError(c.code, c.message, c.status));
+        } else if (c.code === 'VIDEO_NOT_FOUND') {
           finish(engineError(c.code, c.message, c.status));
         } else if (c.code === 'NETWORK_ERROR') {
           finish(engineError(c.code, c.message, c.status));

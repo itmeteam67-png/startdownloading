@@ -116,6 +116,14 @@ function get(port, urlPath) {
   assert.strictEqual(classifyEngineFailure('ERROR: Unable to download webpage: timed out').code, 'NETWORK_ERROR');
   assert.strictEqual(classifyEngineFailure('some random failure').code, 'PROCESSING_FAILED');
   ok('PLATFORM classifier: private/DRM never bypassed, mapped to PRIVATE_CONTENT');
+  // Upstream rejections must NEVER be mislabeled as private content.
+  assert.strictEqual(classifyEngineFailure('ERROR: [youtube] abc123: Sign in to confirm you\u2019re not a bot. Use --cookies-from-browser or --cookies for the authentication.').code, 'UPSTREAM_REJECTED');
+  assert.strictEqual(classifyEngineFailure('ERROR: [youtube] abc123: Sign in to confirm you are not a bot').code, 'UPSTREAM_REJECTED');
+  assert.strictEqual(classifyEngineFailure('ERROR: Unable to download API page: HTTP Error 403: Forbidden').code, 'UPSTREAM_REJECTED');
+  assert.strictEqual(classifyEngineFailure('ERROR: HTTP Error 429: Too Many Requests').code, 'UPSTREAM_REJECTED');
+  assert.strictEqual(classifyEngineFailure('ERROR: Private video. Sign in if you have been granted access to this video').code, 'PRIVATE_CONTENT');
+  assert.strictEqual(classifyEngineFailure('ERROR: This video is unavailable').code, 'VIDEO_NOT_FOUND');
+  ok('PLATFORM classifier: bot-check/403/429 -> UPSTREAM_REJECTED, never PRIVATE_CONTENT');
 
   /* ---------- SSRF ---------- */
   await assert.rejects(assertUrlSafe(parseUrl('http://127.0.0.1/video.mp4')), (e) => e.code === 'SSRF_BLOCKED');
