@@ -651,7 +651,7 @@ a{text-decoration:none}
   function escHtml(s) {
     return String(s == null ? '' : s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
   }
-  var API_BASE = ''; // same-origin: backend serves this page in dev; configure reverse proxy in prod
+ var API_BASE = 'https://api.startdownloading.com'; // Railway backend — cross-origin from startdownloading.com
   function postJson(urlPath, body, timeoutMs) {
     var controller = null;
     var timeoutId = null;
