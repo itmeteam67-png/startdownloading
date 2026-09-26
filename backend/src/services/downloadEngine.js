@@ -81,21 +81,8 @@ async function runYtdlp({ url, platform, jobId, log, formatSelector, needsMerge 
     '--socket-timeout', '20',
     '--retries', '1',
   ];
-   const args = [
-  '--no-playlist',
-  '--no-cookies',
-  '--no-cache-dir',
-  '--no-mtime',
-  '--socket-timeout', '20',
-  '--retries', '1',
-];
-if (config.proxyUrl) args.push('--proxy', config.proxyUrl);   // ⬅️ هادي السطر الجديد
-if (config.ffmpegLocation) args.push('--ffmpeg-location', config.ffmpegLocation);
+  if (config.proxyUrl) args.push('--proxy', config.proxyUrl);
   if (config.ffmpegLocation) args.push('--ffmpeg-location', config.ffmpegLocation);
-  // Phase 7: when a validated formatId was selected, it (and only it)
-  // determines the media. Video-only selections are merged with the best
-  // compatible audio into an MP4 via ffmpeg. The legacy single-step path
-  // still uses the per-platform default selector.
   const selector = formatSelector || platformFormat(platform);
   args.push('-f', selector);
   if (needsMerge) args.push('--merge-output-format', 'mp4');
@@ -103,7 +90,7 @@ if (config.ffmpegLocation) args.push('--ffmpeg-location', config.ffmpegLocation)
     '--max-filesize', `${Math.floor(config.maxDownloadBytes / 1024 / 1024)}M`,
     '-o', outTemplate,
     '--print', 'after_move:filepath',
-    url // single argv element — never concatenated into a shell string
+    url
   );
   log(`spawning engine for platform=${platform}`);
   return new Promise((resolve, reject) => {
