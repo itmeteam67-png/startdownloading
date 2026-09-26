@@ -10,7 +10,7 @@ WORKDIR /app
 RUN apt-get update \
   && apt-get install -y --no-install-recommends python3 python3-pip ffmpeg ca-certificates \
   && rm -rf /var/lib/apt/lists/* \
-  && python3 -m pip install --no-cache-dir --break-system-packages yt-dlp
+ && python3 -m pip install --no-cache-dir --break-system-packages -U yt-dlp
 
 COPY backend/package.json backend/package-lock.json* ./backend/
 RUN cd backend && npm ci --omit=dev --no-audit --no-fund
