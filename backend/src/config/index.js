@@ -6,7 +6,7 @@ const path = require('path');
 
 
 
-proxyUrl: process.env.PROXY_URL || null,
+
 
 
 function num(name, fallback) {
@@ -46,6 +46,7 @@ const config = {
   siteMax: num('RATE_LIMIT_SITE_MAX', 300),
   fileTtlMs: num('FILE_TTL_MS', 10 * 60 * 1000),
   maxUrlLength: 2048,
+  proxyUrl: process.env.PROXY_URL || null,
 };
 
 module.exports = config;
