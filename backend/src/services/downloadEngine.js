@@ -87,6 +87,7 @@ async function runYtdlp({ url, platform, jobId, log, formatSelector, needsMerge 
     '--no-mtime',
     '--socket-timeout', '20',
     '--retries', '1',
+         '--js-runtimes', 'deno:/usr/local/bin/deno',
   ];
   if (config.proxyUrl) args.push('--proxy', config.proxyUrl);
   if (config.ffmpegLocation) args.push('--ffmpeg-location', config.ffmpegLocation);
