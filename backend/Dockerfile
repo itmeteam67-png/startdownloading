@@ -8,9 +8,12 @@ WORKDIR /app
 # Engine dependencies (Debian slim): python + ffmpeg, then yt-dlp.
 # Build from the repository root: docker build -f backend/Dockerfile -t startdownloading .
 RUN apt-get update \
-  && apt-get install -y --no-install-recommends python3 python3-pip ffmpeg ca-certificates \
+  && apt-get install -y --no-install-recommends python3 python3-pip ffmpeg ca-certificates curl unzip \
   && rm -rf /var/lib/apt/lists/* \
- && python3 -m pip install --no-cache-dir --break-system-packages -U yt-dlp
+  && python3 -m pip install --no-cache-dir --break-system-packages -U "yt-dlp[default]" \
+  && curl -fsSL https://deno.land/install.sh | sh
+
+ENV PATH="/root/.deno/bin:$PATH"
 
 COPY backend/package.json backend/package-lock.json* ./backend/
 RUN cd backend && npm ci --omit=dev --no-audit --no-fund
