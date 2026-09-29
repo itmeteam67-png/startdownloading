@@ -72,6 +72,13 @@ function cleanupFile(filePath) {
 
 async function runYtdlp({ url, platform, jobId, log, formatSelector, needsMerge }) {
   await ensureTempDir();
+
+
+     if (config.proxyUrl) {
+    log('PROXY_URL is configured and will be passed to yt-dlp.');
+  } else {
+    log('PROXY_URL is NOT configured.');
+  }
   const outTemplate = path.join(config.tempDir, `${jobId}.%(ext)s`);
   const args = [
     '--no-playlist',
