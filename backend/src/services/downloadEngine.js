@@ -76,6 +76,7 @@ async function runYtdlp({ url, platform, jobId, log, formatSelector, needsMerge 
 
      if (config.proxyUrl) {
     log('PROXY_URL is configured and will be passed to yt-dlp.');
+          log(`args-check jsRuntimes=${'--js-runtimes'} deno=${require('fs').existsSync('/usr/local/bin/deno')}`);
   } else {
     log('PROXY_URL is NOT configured.');
   }
