@@ -10,7 +10,7 @@ WORKDIR /app
 RUN apt-get update \
   && apt-get install -y --no-install-recommends python3 python3-pip ffmpeg ca-certificates curl unzip \
   && rm -rf /var/lib/apt/lists/* \
-  && python3 -m pip install --no-cache-dir --break-system-packages -U "yt-dlp[default]" \
+  && python3 -m pip install --no-cache-dir --break-system-packages -U "yt-dlp[default,curl-cffi]" \
   && curl -fsSL https://deno.land/install.sh | sh
 
 ENV PATH="/root/.deno/bin:$PATH"
