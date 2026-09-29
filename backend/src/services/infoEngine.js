@@ -56,8 +56,13 @@ function runInfoDump({ url, requestId }) {
     '--no-mtime',
     '--socket-timeout', '20',
     '--retries', '1',
-    url, // single argv element — never a shell string
+    '--js-runtimes', 'deno:/usr/local/bin/deno',
   ];
+
+  if (config.proxyUrl) args.push('--proxy', config.proxyUrl);
+  args.push(url); 
+   // single argv element — never a shell string
+   
   return new Promise((resolve, reject) => {
     let child;
     try {
