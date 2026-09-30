@@ -1,28 +1,25 @@
 # StartDownloading production image.
-# Node runtime + yt-dlp engine + ffmpeg (engine dependency for merges).
 FROM node:22-bookworm-slim
 
 ENV NODE_ENV=production
 WORKDIR /app
 
-# Engine dependencies (Debian slim): python + ffmpeg, then yt-dlp.
-# Build from the repository root: docker build -f backend/Dockerfile -t startdownloading .
 RUN apt-get update \
   && apt-get install -y --no-install-recommends python3 python3-pip ffmpeg ca-certificates curl unzip \
   && rm -rf /var/lib/apt/lists/* \
   && python3 -m pip install --no-cache-dir --break-system-packages -U "yt-dlp[default,curl-cffi]" \
-  && curl -fsSL https://deno.land/install.sh | sh
+  && curl -fsSL https://deno.land/install.sh | DENO_INSTALL=/usr/local sh \
+  && deno --version \
+  && yt-dlp --version
 
-ENV PATH="/root/.deno/bin:$PATH"
+ENV PATH="/usr/local/bin:${PATH}"
 
 COPY backend/package.json backend/package-lock.json* ./backend/
 RUN cd backend && npm ci --omit=dev --no-audit --no-fund
 
-# Application: backend + static frontend (index.html, robots.txt, sitemap.xml).
 COPY backend/ ./backend/
 COPY index.html robots.txt sitemap.xml ./
 
-# Least privilege: run as non-root; temp dir stays writable.
 RUN mkdir -p /app/backend/temp && useradd -m -u 10001 app \
   && chown -R app:app /app
 USER app
