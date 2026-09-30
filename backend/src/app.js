@@ -50,6 +50,10 @@ const CSP_DIRECTIVES = {
 const PUBLIC_FILES = {
   '/': { file: 'index.html', cache: 'no-cache' },
   '/index.html': { file: 'index.html', cache: 'no-cache' },
+  '/es/': { file: 'es/index.html', cache: 'no-cache' },
+  '/es/index.html': { file: 'es/index.html', cache: 'no-cache' },
+  '/fr/': { file: 'fr/index.html', cache: 'no-cache' },
+  '/fr/index.html': { file: 'fr/index.html', cache: 'no-cache' },
   '/robots.txt': { file: 'robots.txt', cache: 'public, max-age=3600' },
   '/sitemap.xml': { file: 'sitemap.xml', cache: 'public, max-age=3600' },
 };

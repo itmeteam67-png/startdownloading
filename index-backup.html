@@ -6,10 +6,6 @@
 <title>StartDownloading — Fast, Easy, Free Video Downloader</title>
 <meta name="description" content="Download your favorite videos from YouTube, TikTok, Instagram, Twitter (X), and more — in just a few clicks.">
 <link rel="canonical" href="https://startdownloading.com/">
-<link rel="alternate" hreflang="en" href="https://startdownloading.com/">
-<link rel="alternate" hreflang="es" href="https://startdownloading.com/es/">
-<link rel="alternate" hreflang="fr" href="https://startdownloading.com/fr/">
-<link rel="alternate" hreflang="x-default" href="https://startdownloading.com/">
 <meta name="robots" content="index, follow">
 <meta name="theme-color" content="#070c1d">
 <meta property="og:type" content="website">
@@ -355,8 +351,8 @@ a{text-decoration:none}
   </div>
   <div class="lang-menu" id="langMenu" role="listbox" aria-label="Language">
     <button type="button" data-lang="English" role="option">English</button>
-    <button type="button" data-lang="Español" data-href="/es/" role="option">Español</button>
-    <button type="button" data-lang="Français" data-href="/fr/" role="option">Français</button>
+    <button type="button" data-lang="Español" role="option">Español</button>
+    <button type="button" data-lang="Français" role="option">Français</button>
     <button type="button" data-lang="Deutsch" role="option">Deutsch</button>
     <button type="button" data-lang="العربية" role="option">العربية</button>
     <button type="button" data-lang="हिन्दी" role="option">हिन्दी</button>
@@ -1175,8 +1171,7 @@ a{text-decoration:none}
   langOptions.forEach(function (b, i) {
     b.addEventListener('click', function () {
       langIndex = i;
-      if (b.dataset.href) { window.location.href = b.dataset.href; return; } // locale route (e.g. Español -> /es/)
-      langLabel.textContent = b.dataset.lang;
+      langLabel.textContent = b.dataset.lang; // architecture-ready; no auto-translation in Phase 3
       setLangOpen(false);
       langBtn.focus();
     });
