@@ -54,6 +54,10 @@ const PUBLIC_FILES = {
   '/es/index.html': { file: 'es/index.html', cache: 'no-cache' },
   '/fr/': { file: 'fr/index.html', cache: 'no-cache' },
   '/fr/index.html': { file: 'fr/index.html', cache: 'no-cache' },
+  '/ur/': { file: 'ur/index.html', cache: 'no-cache' },
+  '/ur/index.html': { file: 'ur/index.html', cache: 'no-cache' },
+  '/id/': { file: 'id/index.html', cache: 'no-cache' },
+  '/id/index.html': { file: 'id/index.html', cache: 'no-cache' },
   '/robots.txt': { file: 'robots.txt', cache: 'public, max-age=3600' },
   '/sitemap.xml': { file: 'sitemap.xml', cache: 'public, max-age=3600' },
 };

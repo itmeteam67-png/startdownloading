@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://startdownloading.com/es/</loc>
     <changefreq>weekly</changefreq>
@@ -7,6 +7,33 @@
   </url>
   <url>
     <loc>https://startdownloading.com/fr/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://startdownloading.com/ur/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://startdownloading.com/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://startdownloading.com/es/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://startdownloading.com/fr/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://startdownloading.com/de/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://startdownloading.com/hi/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://startdownloading.com/ar/"/>
+    <xhtml:link rel="alternate" hreflang="ur" href="https://startdownloading.com/ur/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://startdownloading.com/"/>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://startdownloading.com/id/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://startdownloading.com/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://startdownloading.com/es/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://startdownloading.com/fr/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://startdownloading.com/de/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://startdownloading.com/hi/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://startdownloading.com/ar/"/>
+    <xhtml:link rel="alternate" hreflang="ur" href="https://startdownloading.com/ur/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://startdownloading.com/id/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://startdownloading.com/"/>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
