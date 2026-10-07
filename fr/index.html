@@ -260,6 +260,12 @@ a{text-decoration:none}
 }
 .foot-logo{margin-bottom:2px}
 .foot-logo .logo-word{font-size:22px}
+.foot-lang{max-width:1280px;margin:0 auto;padding:0 40px 20px;display:flex;flex-wrap:wrap;gap:2px 18px;justify-content:center;color:#7d8ca8;font-size:13px}
+.foot-lang a{color:#9aa9c2;font-size:13px;padding:4px 2px}
+.foot-lang a:hover{color:#fff;text-decoration:underline;text-underline-offset:4px}
+.foot-lang a[aria-current="page"]{color:var(--cyan);font-weight:700}
+@media(max-width:1240px){.foot-lang{padding:0 24px 20px}}
+@media(max-width:767.98px){.foot-lang{padding:0 20px 16px}}
 
 /* ============ 8. RESPONSIVE (Bootstrap 5 breakpoints + brand layer) ============ */
 /* Toggler visibility is brand-controlled (CDN-independent): hidden on lg+. */
@@ -407,15 +413,12 @@ a{text-decoration:none}
   <div class="lang-menu" id="langMenu" role="listbox" aria-label="Langue">
     <button type="button" data-lang="English" data-href="/" role="option">English</button>
     <button type="button" data-lang="Español" data-href="/es/" role="option">Español</button>
-    <button type="button" data-lang="Français" role="option">Français</button>
-    <button type="button" data-lang="Deutsch" role="option">Deutsch</button>
-    <button type="button" data-lang="العربية" role="option">العربية</button>
-    <button type="button" data-lang="हिन्दी" role="option">हिन्दी</button>
+    <button type="button" data-lang="Français" data-href="/fr/" role="option">Français</button>
+    <button type="button" data-lang="Deutsch" data-href="/de/" role="option">Deutsch</button>
+    <button type="button" data-lang="العربية" data-href="/ar/" role="option">العربية</button>
+    <button type="button" data-lang="हिन्दी" data-href="/hi/" role="option">हिन्दी</button>
     <button type="button" data-lang="اردو" data-href="/ur/" role="option">اردو</button>
     <button type="button" data-lang="Bahasa Indonesia" data-href="/id/" role="option">Bahasa Indonesia</button>
-    <button type="button" data-lang="Mexicano" role="option">Mexicano</button>
-    <button type="button" data-lang="Türkçe" role="option">Türkçe</button>
-    <button type="button" data-lang="Italiano" role="option">Italiano</button>
   </div>
 </header>
 
@@ -794,7 +797,18 @@ a{text-decoration:none}
       </div>
     </div>
   </nav>
-  <div class="foot-bottom"><div class="foot-bottom-in"><span>© <span id="footYear">2026</span> StartDownloading. Tous droits réservés.</span></div></div>
+  <div class="foot-bottom"><div class="foot-bottom-in"><span>© <span id="footYear">2026</span> StartDownloading. Tous droits réservés.</span></div>
+  <nav class="foot-lang" aria-label="Langues">
+    <a href="/" hreflang="en">English</a>
+    <a href="/es/" hreflang="es">Español</a>
+    <a href="/fr/" hreflang="fr" aria-current="page">Français</a>
+    <a href="/de/" hreflang="de">Deutsch</a>
+    <a href="/ar/" hreflang="ar">العربية</a>
+    <a href="/hi/" hreflang="hi">हिन्दी</a>
+    <a href="/ur/" hreflang="ur">اردو</a>
+    <a href="/id/" hreflang="id">Bahasa Indonesia</a>
+  </nav>
+  </div>
 </footer>
 
 <!-- Bootstrap 5.3.3 bundle (Collapse + dropdown APIs for the mobile menu).
