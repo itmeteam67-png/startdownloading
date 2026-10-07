@@ -1326,7 +1326,7 @@ a{text-decoration:none}
 
   // Active nav state: Home vs Features via scroll position (visual only).
   var navLinks = Array.prototype.slice.call(document.querySelectorAll('.main-nav a'));
-  var features = document.getElementById('features');
+  var features = document.querySelector('.features');
   function updateActiveNav() {
     var featTop = features.getBoundingClientRect().top;
     var onFeatures = featTop < window.innerHeight * 0.4;
