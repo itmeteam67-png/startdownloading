@@ -1,8 +1,11 @@
+
 # StartDownloading production image.
 FROM node:22-bookworm-slim
 
 ENV NODE_ENV=production
 WORKDIR /app
+
+ARG YTDLP_CACHE_BUST=1
 
 RUN apt-get update \
   && apt-get install -y --no-install-recommends python3 python3-pip ffmpeg ca-certificates curl unzip \
@@ -20,8 +23,10 @@ RUN cd backend && npm ci --omit=dev --no-audit --no-fund
 COPY backend/ ./backend/
 COPY index.html robots.txt sitemap.xml ./
 
-RUN mkdir -p /app/backend/temp && useradd -m -u 10001 app \
+RUN mkdir -p /app/backend/temp /app/secrets \
+  && useradd -m -u 10001 app \
   && chown -R app:app /app
+
 USER app
 
 EXPOSE 3001
