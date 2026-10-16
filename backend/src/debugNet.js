@@ -15,7 +15,8 @@ function curl(label, args) {
 }
 
 module.exports = async function debugNet(req, res) {
-  if (req.query.k !== 'chof-2026-xyz') return res.status(404).end();
+  const u = new URL(req.url, 'http://x');
+  if (u.searchParams.get('k') !== 'chof-2026-xyz') { res.statusCode = 404; return res.end(); }
   const p = process.env.PROXY_URL;
   const tests = [
     curl('1-direct-youtube', ['https://www.youtube.com']),
@@ -28,5 +29,7 @@ module.exports = async function debugNet(req, res) {
       curl('5-proxy-instagram', ['-x', p, 'https://www.instagram.com'])
     );
   }
-  res.json({ hasProxy: !!p, results: await Promise.all(tests) });
+  const results = await Promise.all(tests);
+  res.setHeader('Content-Type', 'application/json');
+  res.end(JSON.stringify({ hasProxy: !!p, results }, null, 2));
 };
