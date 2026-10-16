@@ -50,13 +50,14 @@ function runInfoDump({ url, requestId }) {
   const bin = getEngineBin();
   const args = [
     '--dump-single-json',
-    '--no-playlist',
-    '--no-cookies',
+    '--no-playlist',  
     '--no-cache-dir',
     '--no-mtime',
-    '--socket-timeout', '20',
-    '--retries', '1',
+    '--force-ipv4',
+    '--socket-timeout', '10',
+    '--retries', '2',
     '--js-runtimes', 'deno:/usr/local/bin/deno',
+
   ];
 
   if (config.proxyUrl) args.push('--proxy', config.proxyUrl);
