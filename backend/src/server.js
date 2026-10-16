@@ -1,5 +1,17 @@
 'use strict';
 
+
+
+const { execFile } = require('child_process');
+if (process.env.PROXY_URL) {
+  const run = (label, args) => execFile('curl', args, { timeout: 25000 }, (err, out, errOut) => {
+    console.log(JSON.stringify({ scope: 'proxyTest', label, err: err ? String(err.message).slice(0, 200) : null, out: String(out).slice(0, 300) }));
+  });
+  run('ipify-via-proxy', ['-sS', '-m', '15', '-x', process.env.PROXY_URL, 'https://api.ipify.org']);
+  run('instagram-via-proxy', ['-sS', '-I', '-m', '15', '-x', process.env.PROXY_URL, 'https://www.instagram.com']);
+  run('youtube-via-proxy', ['-sS', '-I', '-m', '15', '-x', process.env.PROXY_URL, 'https://www.youtube.com']);
+}
+
 const path = require('path');
 // Local development configuration. Production uses real environment
 // variables; .env is git-ignored and never committed.
