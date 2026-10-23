@@ -183,6 +183,8 @@ function pickThumbnail(data) {
 }
 
 const ALLOWED_INFO_EXTS = new Set(['mp4', 'webm', 'mkv', 'mov', 'm4a', 'mp3']);
+const VIDEO_EXT_SET = new Set(['mp4', 'webm', 'mkv', 'mov']);
+const AUDIO_EXT_SET = new Set(['m4a', 'mp3', 'opus', 'aac', 'ogg']);
 
 function normalizeFormats(rawFormats) {
   const list = Array.isArray(rawFormats) ? rawFormats : [];
@@ -195,8 +197,12 @@ function normalizeFormats(rawFormats) {
     if (!ALLOWED_INFO_EXTS.has(ext)) continue;
     const vcodec = String(f.vcodec || 'none');
     const acodec = String(f.acodec || 'none');
-    const hasVideo = vcodec !== 'none';
-    const hasAudio = acodec !== 'none';
+    const videoExt = String(f.video_ext || '').toLowerCase();
+    const audioExt = String(f.audio_ext || '').toLowerCase();
+    const isAnimatedGif = !String(f.vcodec || '') && !String(f.acodec || '')
+      && videoExt === 'mp4' && /tweet_video/i.test(String(f.url || ''));
+    const hasVideo = vcodec !== 'none' || VIDEO_EXT_SET.has(videoExt);
+    const hasAudio = acodec !== 'none' || AUDIO_EXT_SET.has(audioExt);
     if (!hasVideo && !hasAudio) continue;
     const height = Number(f.height) || 0;
     const width = Number(f.width) || 0;
@@ -209,6 +215,7 @@ function normalizeFormats(rawFormats) {
       width: width || null, height: height || null, fps: fps || null,
       vcodec, acodec, hasVideo, hasAudio,
       filesize, tbr,
+      needsMerge: isAnimatedGif ? false : undefined,
       formatNote: typeof f.format_note === 'string' ? f.format_note.slice(0, 60) : null,
     });
   }
@@ -231,7 +238,6 @@ function pickBestPerHeight(candidates) {
     if (!c.hasVideo && c.hasAudio) { audioOnly.push(c); continue; }
     if (!c.hasVideo) continue;
     const h = Number(c.height) || 0;
-    if (h <= 0) continue;
     if (!byHeight.has(h)) byHeight.set(h, []);
     byHeight.get(h).push(c);
   }
@@ -267,10 +273,13 @@ function pickBestPerHeight(candidates) {
   // Sort video desc by height, audio last.
   picked.sort((a, b) => qualityRank(b.height) - qualityRank(a.height));
   const out = picked.map((c) => {
-    const label = c.fps && c.fps >= 50 ? `${c.height}p${Math.round(c.fps)}` : `${c.height}p`;
+    const hasHeight = Number(c.height) > 0;
+    const label = hasHeight
+      ? (c.fps && c.fps >= 50 ? `${c.height}p${Math.round(c.fps)}` : `${c.height}p`)
+      : 'Source';
     return {
       formatId: c.formatId,
-      quality: `${c.height}p`,
+      quality: hasHeight ? `${c.height}p` : 'source',
       qualityLabel: label,
       height: c.height,
       width: c.width,
@@ -283,7 +292,7 @@ function pickBestPerHeight(candidates) {
       acodec: c.acodec,
       hasVideo: c.hasVideo,
       hasAudio: c.hasAudio,
-      needsMerge: c.hasVideo && !c.hasAudio,
+      needsMerge: typeof c.needsMerge === 'boolean' ? c.needsMerge : c.hasVideo && !c.hasAudio,
     };
   });
   if (bestAudio) {

@@ -93,7 +93,9 @@ async function postVideoDownload(req, res, next) {
     // never from raw browser input.
     const hasVideo = !!selected.hasVideo;
     const hasAudio = !!selected.hasAudio;
-    const needsMerge = hasVideo && !hasAudio;
+    const needsMerge = typeof selected.needsMerge === 'boolean'
+      ? selected.needsMerge
+      : hasVideo && !hasAudio;
     const formatSelector = needsMerge ? `${selected.formatId}+bestaudio/b` : selected.formatId;
     const quality = selected.quality || null;
 

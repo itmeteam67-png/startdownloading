@@ -1,0 +1,1254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Twitter Video Downloader - Download Public X Videos Online</title>
+<meta name="description" content="Use this free Twitter video downloader to save public X videos in your browser. Paste a twitter.com or x.com post link and choose from the real formats shown.">
+<link rel="canonical" href="https://startdownloading.com/twitter-video-downloader">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#070c1d">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="StartDownloading">
+<meta property="og:title" content="Twitter Video Downloader - Download Public X Videos Online">
+<meta property="og:description" content="Use this free Twitter video downloader to save public X videos in your browser. Paste a twitter.com or x.com post link and choose from the real formats shown.">
+<meta property="og:url" content="https://startdownloading.com/twitter-video-downloader">
+<meta property="og:image" content="https://startdownloading.com/apple-touch-icon.png">
+<meta property="og:image:width" content="180">
+<meta property="og:image:height" content="180">
+<meta property="og:image:alt" content="StartDownloading logo">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Twitter Video Downloader - Download Public X Videos Online">
+<meta name="twitter:description" content="Use this free Twitter video downloader to save public X videos in your browser. Paste a twitter.com or x.com post link and choose from the real formats shown.">
+<meta name="twitter:image" content="https://startdownloading.com/apple-touch-icon.png">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","@id":"https://startdownloading.com/twitter-video-downloader#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://startdownloading.com/"},{"@type":"ListItem","position":2,"name":"Twitter / X"},{"@type":"ListItem","position":3,"name":"Twitter Video Downloader","item":"https://startdownloading.com/twitter-video-downloader"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Twitter Video Downloader - Download Public X Videos Online","description":"Use this free Twitter video downloader to save public X videos in your browser. Paste a twitter.com or x.com post link and choose from the real formats shown.","url":"https://startdownloading.com/twitter-video-downloader","inLanguage":"en","isPartOf":{"@type":"WebSite","name":"StartDownloading","url":"https://startdownloading.com/"},"breadcrumb":{"@id":"https://startdownloading.com/twitter-video-downloader#breadcrumb"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Twitter Video Downloader","url":"https://startdownloading.com/twitter-video-downloader","applicationCategory":"MultimediaApplication","applicationSubCategory":"Video downloader","operatingSystem":"Any (web browser on desktop, iPhone, iPad, Android)","browserRequirements":"Requires JavaScript and a modern web browser","description":"Use this free Twitter video downloader to save public X videos in your browser. Paste a twitter.com or x.com post link and choose from the real formats shown.","offers":{"@type":"Offer","price":"0","priceCurrency":"USD","availability":"https://schema.org/InStock"},"featureList":["Accepts public twitter.com and x.com post links","Lists the real formats and resolutions the source provides","Downloads the selected file to the device"],"publisher":{"@type":"Organization","name":"StartDownloading","url":"https://startdownloading.com/"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is this Twitter video downloader free?","acceptedAnswer":{"@type":"Answer","text":"Yes. There is no account, subscription, or payment required. Normal rate limits still apply so the service stays available, and you can use the downloader as often as those limits allow."}},{"@type":"Question","name":"Does it work with both Twitter and X links?","acceptedAnswer":{"@type":"Answer","text":"Yes. Links from twitter.com and x.com are accepted, including the www and mobile variants. The address must point to an individual post with /status/ and the post number, not to a profile, search, or hashtag page."}},{"@type":"Question","name":"Can I download a video from a private or protected account?","acceptedAnswer":{"@type":"Answer","text":"No. The downloader only works with public posts. Protected accounts, follower-only posts, age-restricted content, and login-only pages are refused, and access controls are never bypassed."}},{"@type":"Question","name":"What formats and quality can I choose?","acceptedAnswer":{"@type":"Answer","text":"You see the formats and resolutions the source actually provides, and each option shows its real container. Nothing is invented or upscaled. X commonly supplies MP4 video, audio-only options may appear, and a + audio label means the server will merge an audio track with that video stream."}},{"@type":"Question","name":"Why does a Twitter/X link return an error?","acceptedAnswer":{"@type":"Answer","text":"Common causes are a private or deleted post, an age or region restriction, a post with no video, a profile or search link instead of a /status/ post, a rate limit, or a temporary upstream refusal. Check the link and try again later."}},{"@type":"Question","name":"Is the downloader safe, and do I need to log in?","acceptedAnswer":{"@type":"Answer","text":"You never enter an X password, cookie, or login. The link is sent to the StartDownloading server only to read the public post, prepared files are temporary and removed automatically, and logs keep the hostname and outcome rather than the full URL. Save only content you have permission to use."}},{"@type":"Question","name":"Does it work on iPhone and Android?","acceptedAnswer":{"@type":"Answer","text":"Yes. It runs in the browser on both platforms without an app. On iPhone and iPad the file normally goes to Files, then Downloads; if a share sheet appears, choose Save to Files. On Android, Chrome saves it to the Downloads folder."}}]}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<!-- Bootstrap 5.3.3: grid + collapse + utilities only. All brand styling stays in
+     the custom stylesheet below, which loads AFTER Bootstrap so equal-specificity
+     ties resolve to the approved StartDownloading visuals. -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<style>
+/* ============ DESIGN SYSTEM (Phase 2 — UI only) ============ */
+:root{
+  --bg-0:#060b1c;
+  --bg-1:#080e22;
+  --bg-2:#0a1230;
+  --surface:#0d1640;
+  --input-bg:rgba(13,22,46,.92);
+  --text:#ffffff;
+  --muted:#b9c6dc;
+  --muted-2:#9aa9c2;
+  --nav-text:#c2cddf;
+  --cyan:#2fb3ff;
+  --blue:#2aa9f8;
+  --blue-deep:#1ea7fd;
+  --purple:#7a4df5;
+  --pink:#c03ff0;
+  --magenta:#e04bf0;
+  --border-soft:rgba(255,255,255,.07);
+  --input-border:rgba(80,140,255,.45);
+  --radius-pill:999px;
+  --radius-card:14px;
+  --radius-icon:18px;
+  --font:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--font);background:var(--bg-0);color:var(--text);overflow-x:hidden;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+button{font-family:inherit}
+img{display:block;max-width:100%}
+a{text-decoration:none}
+
+/* ============ 1. HEADER / NAVBAR ============ */
+.site-header{background:rgba(7,12,29,.9);border-bottom:1px solid var(--border-soft);position:relative;z-index:50;backdrop-filter:blur(12px)}
+.navbar{height:72px;max-width:1536px;margin:0 auto;padding:0 40px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+/* Logo */
+.logo{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.logo-mark{width:34px;height:34px;border-radius:11px 11px 11px 4px;background:linear-gradient(135deg,#2ea6ff 0%,#4a5cf5 55%,#7a35f5 100%);display:inline-flex;align-items:center;justify-content:center;transform:skewX(-5deg);box-shadow:0 0 20px rgba(60,120,255,.5)}
+.logo-mark svg{transform:skewX(5deg);margin-left:2px}
+.logo-word{font-size:25px;font-weight:800;letter-spacing:-.5px;white-space:nowrap}
+.logo-word .w{color:#fff}
+.logo-word .g{background:linear-gradient(90deg,#2aa9f8 0%,#6a5cff 45%,#c040f0 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+/* Nav */
+.main-nav ul{display:flex;align-items:center;gap:44px;list-style:none}
+.main-nav a{position:relative;display:inline-flex;align-items:center;gap:7px;color:var(--nav-text);font-size:15px;font-weight:500;padding:10px 2px;transition:color .18s ease}
+.main-nav a:hover{color:#fff}
+.main-nav a.is-active{color:var(--cyan)}
+.main-nav a.is-active::after{content:'';position:absolute;left:0;right:0;bottom:-13px;height:2px;border-radius:2px;background:var(--cyan);box-shadow:0 0 10px var(--cyan)}
+/* Right */
+.nav-right{display:flex;align-items:center;gap:24px;flex-shrink:0}
+.lang-select{display:inline-flex;align-items:center;gap:8px;background:none;border:0;color:#d3dcec;font-size:14.5px;font-weight:500;cursor:pointer;padding:8px 2px}
+.lang-select:hover{color:#fff}
+.lang-menu{position:absolute;top:66px;right:max(24px,calc((100vw - 1536px)/2 + 190px));min-width:160px;max-height:320px;overflow-x:hidden;overflow-y:auto;background:#101a36;border:1px solid rgba(255,255,255,.12);border-radius:12px;box-shadow:0 20px 50px rgba(0,0,0,.6);display:none;z-index:99}
+.lang-menu.open{display:block}
+.lang-menu button{display:block;width:100%;background:none;border:0;color:#cdd7e8;font-size:14px;text-align:left;padding:11px 16px;cursor:pointer}
+.lang-menu button:hover{background:rgba(255,255,255,.07);color:#fff}
+.sd-btn{display:inline-flex;align-items:center;gap:8px;border:0;cursor:pointer;color:#fff;font-weight:700;border-radius:var(--radius-pill);background:linear-gradient(90deg,#22a8fd 0%,#5b5bf5 55%,#b44cf0 100%);transition:transform .15s ease,box-shadow .2s ease,filter .2s ease}
+.btn-now{font-size:14.5px;padding:11px 22px;box-shadow:0 4px 24px rgba(80,120,255,.45);white-space:nowrap}
+.btn-now:hover{transform:translateY(-1px);box-shadow:0 8px 32px rgba(80,120,255,.6)}
+.btn-now:active{transform:translateY(0)}
+.btn-dl{font-size:18px;padding:15px 42px;box-shadow:0 4px 20px rgba(60,140,255,.5);white-space:nowrap}
+.btn-dl:hover{filter:brightness(1.08);transform:translateY(-1px)}
+.btn-dl:active{transform:translateY(0);filter:brightness(1)}
+
+/* ============ 2. HERO ============ */
+.hero{position:relative;text-align:center;overflow:hidden;padding:42px 24px 0;background:radial-gradient(1000px 480px at 15% 0%,rgba(20,60,120,.35),transparent 60%),radial-gradient(900px 480px at 85% 8%,rgba(20,80,160,.28),transparent 60%),linear-gradient(180deg,#080e22 0%,#0a1230 55%,#0a122e 100%)}
+.hero::before{content:'';position:absolute;left:-180px;top:-40px;width:420px;height:420px;background:radial-gradient(circle,rgba(0,220,255,.16),transparent 65%);pointer-events:none}
+.hero::after{content:'';position:absolute;right:-160px;top:10px;width:440px;height:440px;background:radial-gradient(circle,rgba(0,180,255,.16),transparent 65%);pointer-events:none}
+.hero-inner{position:relative;z-index:5;max-width:900px;margin:0 auto}
+/* Badge */
+.sd-badge{display:inline-flex;align-items:center;gap:11px;padding:9px 24px;border-radius:var(--radius-pill);font-size:14.5px;font-weight:600;color:#e8eef8;background-image:linear-gradient(#0b1330,#0b1330),linear-gradient(90deg,#2aa9f8,#7a4df5,#c040f0);background-origin:border-box;background-clip:padding-box,border-box;border:1px solid transparent;box-shadow:0 0 20px rgba(80,120,255,.25),inset 0 0 18px rgba(60,100,255,.12)}
+.sd-badge .sep{width:4px;height:4px;border-radius:50%;background:#5b8cff}
+.sd-badge .sep.pink{background:#b44cf0}
+/* Title */
+.hero-title{margin-top:22px;font-size:clamp(48px,6.8vw,82px);font-weight:900;letter-spacing:-2.5px;line-height:1.02}
+.hero-title .t-white{color:#fff}
+.hero-title .t-grad{background:linear-gradient(90deg,#2ea6ff 0%,#4a6cf7 30%,#7a4df5 55%,#c03ff0 85%,#e04bf0 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+/* Description */
+.hero-sub{margin:18px auto 0;max-width:700px;color:var(--muted);font-size:18px;line-height:1.55;font-weight:400}
+
+/* ============ 3. DOWNLOADER (UI structure only — no backend) ============ */
+.downloader-wrap{position:relative;z-index:5;max-width:872px;margin:30px auto 0}
+.downloader{display:flex;align-items:center;gap:10px;background:var(--input-bg);border:1px solid var(--input-border);border-radius:var(--radius-pill);padding:10px 10px 10px 28px;box-shadow:0 10px 50px rgba(0,20,80,.5),0 0 30px rgba(60,120,255,.18),inset 0 1px 0 rgba(255,255,255,.08);transition:border-color .2s ease,box-shadow .2s ease}
+.downloader:focus-within{border-color:rgba(90,160,255,.75);box-shadow:0 10px 50px rgba(0,20,80,.5),0 0 38px rgba(60,120,255,.32),inset 0 1px 0 rgba(255,255,255,.08)}
+.downloader .link-icon{color:#9fb0ca;flex-shrink:0;display:inline-flex}
+.url-input{flex:1;min-width:0;background:transparent;border:0;outline:0;color:#fff;font-size:17px;font-family:inherit}
+.url-input::placeholder{color:#8494ad}
+
+/* ============ 4. PLATFORMS ============ */
+.platforms{position:relative;z-index:5;display:flex;align-items:stretch;justify-content:center;margin:30px auto 0;max-width:900px}
+.platform{display:flex;flex-direction:column;align-items:center;gap:10px;background:none;border:0;color:#cdd7e8;padding:0 46px;position:relative;cursor:pointer}
+.platform + .platform::before{content:'';position:absolute;left:0;top:10px;bottom:30px;width:1px;background:rgba(255,255,255,.12)}
+.platform-icon{height:46px;display:flex;align-items:center;justify-content:center}
+.platform-label{font-size:14.5px;font-weight:500;color:#c5d0e2}
+.platform:hover .platform-label{color:#fff}
+.platform:hover{filter:brightness(1.1)}
+.more-dot{width:46px;height:46px;border-radius:50%;border:1.5px solid rgba(255,255,255,.22);background:rgba(255,255,255,.04);display:inline-flex;align-items:center;justify-content:center;gap:4px}
+.more-dot i{width:5px;height:5px;border-radius:50%;background:#fff;display:block}
+
+/* ============ 5. FLOATING CARDS ============ */
+.float-card{position:absolute;z-index:4;width:274px;filter:drop-shadow(0 18px 40px rgba(0,0,0,.55))}
+.float-frame{position:relative;border-radius:var(--radius-card);overflow:hidden;border:2px solid transparent;background-image:linear-gradient(#000,#000),linear-gradient(135deg,#4da6ff,#8b3ff5);background-origin:border-box;background-clip:padding-box,border-box;box-shadow:0 0 28px rgba(100,80,255,.55)}
+.float-frame img{width:100%;object-fit:cover}
+.card-left{left:4px;top:56px;transform:rotate(-10deg)}
+.card-left img{height:160px}
+.card-rt{right:26px;top:44px;transform:rotate(10deg);width:212px}
+.card-rt img{height:126px}
+.card-rb{right:18px;top:274px;transform:rotate(10deg);width:212px}
+.card-rb img{height:128px}
+.play-btn{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);border-radius:50%;background:rgba(0,0,0,.45);border:1.5px solid rgba(255,255,255,.85);display:flex;align-items:center;justify-content:center;backdrop-filter:blur(4px)}
+.play-lg{width:52px;height:52px}
+.play-sm{width:42px;height:42px}
+.play-btn::after{content:'';border-left:15px solid #fff;border-top:9px solid transparent;border-bottom:9px solid transparent;margin-left:3px}
+.duration{position:absolute;right:10px;bottom:10px;background:rgba(0,0,0,.75);font-size:12.5px;font-weight:700;padding:4px 9px;border-radius:7px}
+.plat-badge{position:absolute;width:40px;height:40px;border-radius:11px;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 18px rgba(0,0,0,.5)}
+.pb-yt{right:-14px;top:-16px;background:#ff0033;transform:rotate(10deg)}
+.pb-tt{left:-16px;top:2px;background:#000;border:1px solid rgba(255,255,255,.18);width:44px;height:44px;border-radius:12px;transform:rotate(-10deg)}
+.pb-ig{right:-12px;top:-18px;background:linear-gradient(45deg,#f9ce34,#ee2a7b,#6228d7);transform:rotate(-10deg)}
+.deco-arrow{position:absolute;z-index:4;pointer-events:none;opacity:.9}
+
+/* ============ 6. WAVE / CURVE ============ */
+.wave{position:relative;height:150px;margin-top:54px;z-index:3}
+.wave svg{position:absolute;left:50%;transform:translateX(-50%);bottom:-10px;width:1600px;max-width:none;height:170px;display:block}
+
+/* ============ 7. FEATURES ============ */
+.features{background:#080d1f;padding:54px 48px 92px}
+.feat-icon{width:68px;height:68px;border-radius:var(--radius-icon);margin:0 auto 18px;display:flex;align-items:center;justify-content:center}
+.fi-blue{background:linear-gradient(180deg,#1c2a8a,#101c5e);border:1px solid rgba(80,140,255,.6);box-shadow:0 0 24px rgba(60,120,255,.45)}
+.fi-green{background:linear-gradient(180deg,#0d4a3e,#0a2e28);border:1px solid rgba(40,220,180,.5);box-shadow:0 0 24px rgba(30,200,160,.35)}
+.fi-purple{background:linear-gradient(180deg,#3d1a9e,#220f66);border:1px solid rgba(150,100,255,.55);box-shadow:0 0 24px rgba(130,80,255,.45)}
+.fi-orange{background:linear-gradient(180deg,#8a3a12,#5a2208);border:1px solid rgba(255,140,60,.55);box-shadow:0 0 24px rgba(255,130,40,.35)}
+.feat h3{font-size:20px;font-weight:800;letter-spacing:-.3px;margin-bottom:10px}
+.feat p{color:var(--muted-2);font-size:15px;line-height:1.55}
+
+:focus-visible{outline:2px solid var(--cyan);outline-offset:2px}
+/* Accessibility helpers (no visual change for sighted users) */
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+.skip-link{position:absolute;left:16px;top:-48px;z-index:200;background:#fff;color:#0a1230;font-weight:700;font-size:14px;padding:10px 18px;border-radius:999px;transition:top .15s ease}
+.skip-link:focus{top:12px}
+/* ============ 9. FRONTEND STATES (Phase 3 — visual language only, no layout change) ============ */
+.field-status{min-height:22px;margin-top:10px;font-size:13.5px;line-height:1.5;color:var(--muted);text-align:center}
+.field-status[data-tone="error"]{color:#ff9aa8}
+.field-status[data-tone="ok"]{color:#8fe3c0}
+.field-status[data-tone="info"]{color:#8ecbff}
+.downloader.has-error{border-color:rgba(255,110,130,.65);box-shadow:0 10px 50px rgba(0,20,80,.5),0 0 26px rgba(255,90,120,.22),inset 0 1px 0 rgba(255,255,255,.08)}
+.platform-chip{display:none;align-items:center;gap:7px;justify-content:center;margin-top:8px;font-size:13px;font-weight:600;color:#cfe0ff}
+.platform-chip.is-visible{display:inline-flex}
+.platform-chip .dot{width:7px;height:7px;border-radius:50%;background:linear-gradient(90deg,var(--blue),var(--pink));box-shadow:0 0 10px rgba(90,140,255,.8)}
+.spinner{width:18px;height:18px;border-radius:50%;border:2px solid rgba(255,255,255,.45);border-top-color:#fff;animation:spin .7s linear infinite;flex-shrink:0}
+@keyframes spin{to{transform:rotate(360deg)}}
+.sd-btn[disabled]{cursor:not-allowed;opacity:.75;transform:none!important}
+.more-pop{position:absolute;left:50%;transform:translateX(-50%);bottom:calc(100% + 10px);background:#101a36;border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:10px 14px;font-size:13px;color:#cdd7e8;white-space:nowrap;display:none;box-shadow:0 18px 44px rgba(0,0,0,.55);z-index:20}
+.more-pop.open{display:block}
+/* ============ 10. BACKEND RESULT (Phase 4 — reuses existing tokens) ============ */
+.dl-result{margin-top:10px;display:flex;justify-content:center}
+.dl-result[hidden]{display:none}
+.dl-save{display:inline-flex;align-items:center;gap:8px;border-radius:var(--radius-pill);padding:10px 22px;font-size:14px;font-weight:700;color:#fff;background:linear-gradient(90deg,#22a8fd 0%,#5b5bf5 55%,#b44cf0 100%);box-shadow:0 4px 20px rgba(60,140,255,.5)}
+.dl-save:hover{filter:brightness(1.08)}
+/* ============ 11. VIDEO RESULT + QUALITY (Phase 7 — same design tokens) ============ */
+.video-result{margin:18px auto 0;max-width:640px;background:rgba(13,22,46,.92);border:1px solid rgba(80,140,255,.35);border-radius:20px;padding:18px;box-shadow:0 10px 50px rgba(0,20,80,.5),0 0 30px rgba(60,120,255,.15);text-align:left}
+.video-result[hidden]{display:none}
+.vr-top{display:flex;gap:14px;align-items:flex-start}
+.vr-thumb{width:168px;min-width:168px;height:94px;border-radius:12px;object-fit:cover;background:#0a1230;border:1px solid rgba(255,255,255,.1)}
+.vr-title{font-size:16px;font-weight:700;line-height:1.35;color:#fff;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.vr-meta{margin-top:6px;font-size:13px;color:var(--muted);line-height:1.5}
+.vr-meta strong{color:#dbe6f7;font-weight:600}
+.vr-quality-label{margin:14px 2px 8px;font-size:13px;font-weight:700;letter-spacing:.4px;text-transform:uppercase;color:#9fb0ca}
+.vr-qualities{display:flex;flex-wrap:wrap;gap:8px}
+.vr-q{position:relative}
+.vr-q input{position:absolute;opacity:0;pointer-events:none}
+.vr-q span{display:inline-flex;align-items:center;min-height:44px;padding:10px 16px;border-radius:999px;font-size:14px;font-weight:700;color:#cdd7e8;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.14);cursor:pointer;transition:border-color .15s ease,background .15s ease}
+.vr-q span small{font-weight:500;color:#9aa9c2;margin-left:6px;font-size:12px}
+.vr-q input:checked + span{color:#fff;border-color:rgba(90,160,255,.8);background:linear-gradient(90deg,rgba(34,168,253,.25),rgba(90,91,245,.25),rgba(180,76,240,.25));box-shadow:0 0 16px rgba(80,120,255,.35)}
+.vr-q input:focus-visible + span{outline:2px solid var(--cyan);outline-offset:2px}
+.vr-actions{display:flex;gap:10px;align-items:center;margin-top:16px;flex-wrap:wrap}
+.vr-download{flex:1;min-height:52px;justify-content:center;font-size:16px;padding:14px 24px}
+.vr-note{font-size:12.5px;color:#8494ad;margin-top:10px;line-height:1.5}
+.vr-err{margin-top:10px;font-size:13.5px;color:#ff9aa8;line-height:1.5}
+@media(max-width:575.98px){.vr-top{flex-direction:column}.vr-thumb{width:100%;min-width:0;height:160px}.vr-download{width:100%}}
+/* subtle UI-only empty-state nudge (no backend) */
+@keyframes nudge{0%,100%{transform:translateX(0)}25%{transform:translateX(-5px)}75%{transform:translateX(5px)}}
+.downloader.is-empty{animation:nudge .25s ease 2;border-color:rgba(255,120,140,.7)}
+
+/* ============ 12. GLOBAL FOOTER (hub navigation — same tokens) ============ */
+.site-footer{background:#05081a;border-top:1px solid var(--border-soft)}
+.foot-grid{max-width:1280px;margin:0 auto;padding:52px 40px 8px;display:grid;grid-template-columns:1.3fr repeat(5,1fr);gap:32px;text-align:left}
+.foot-brand p{color:var(--muted-2);font-size:14px;line-height:1.6;margin:12px 0 16px;max-width:230px}
+.foot-col h2{font-size:13px;font-weight:800;letter-spacing:1.2px;text-transform:uppercase;color:#8fa0bd;margin-bottom:4px}
+.foot-col ul{list-style:none}
+.foot-col a{display:inline-flex;align-items:center;min-height:44px;color:#c2cddf;font-size:14.5px;font-weight:500;padding:6px 0}
+.foot-col a:hover{color:#fff;text-decoration:underline;text-underline-offset:4px}
+.foot-col a[aria-current="page"]{color:var(--cyan);font-weight:700}
+.foot-toggle{display:none}
+.foot-bottom{border-top:1px solid var(--border-soft);margin-top:28px}
+.foot-bottom-in{max-width:1280px;margin:0 auto;padding:20px 40px;display:flex;justify-content:center;color:#7d8ca8;font-size:13.5px}
+@media(min-width:768px){.foot-toggle{display:none!important}.foot-col .foot-links{display:block!important}.foot-h{display:none}}
+@media(max-width:1240px){.foot-grid{padding:52px 24px 8px}}
+@media(max-width:1100px){.foot-grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:767.98px){
+.foot-grid{grid-template-columns:1fr;gap:0;padding:32px 20px 8px}
+.foot-col{border-bottom:1px solid var(--border-soft)}
+.foot-col h2 .foot-h{display:none}
+.foot-brand{border-bottom:1px solid var(--border-soft);padding-bottom:20px;margin-bottom:8px}
+.foot-toggle{display:flex;width:100%;align-items:center;justify-content:space-between;background:none;border:0;color:#fff;font-size:15px;font-weight:800;min-height:52px;cursor:pointer;text-align:left}
+.foot-toggle .chev{color:var(--cyan);font-size:18px;transition:transform .2s ease}
+.foot-col.open .foot-toggle .chev{transform:rotate(180deg)}
+.foot-col .foot-links{display:block;max-height:0;overflow:hidden;visibility:hidden;padding-bottom:0;transition:max-height .25s ease,visibility 0s linear .25s}
+.foot-col.open .foot-links{max-height:480px;visibility:visible;padding-bottom:12px;transition:max-height .28s ease,visibility 0s}
+}
+.foot-logo{margin-bottom:2px}
+.foot-logo .logo-word{font-size:22px}
+.foot-lang{max-width:1280px;margin:0 auto;padding:0 40px 20px;display:flex;flex-wrap:wrap;gap:2px 18px;justify-content:center;color:#7d8ca8;font-size:13px}
+.foot-lang a{color:#9aa9c2;font-size:13px;padding:4px 2px}
+.foot-lang a:hover{color:#fff;text-decoration:underline;text-underline-offset:4px}
+.foot-lang a[aria-current="page"]{color:var(--cyan);font-weight:700}
+@media(max-width:1240px){.foot-lang{padding:0 24px 20px}}
+@media(max-width:767.98px){.foot-lang{padding:0 20px 16px}}
+
+/* ============ 8. RESPONSIVE (Bootstrap 5 breakpoints + brand layer) ============ */
+/* Toggler visibility is brand-controlled (CDN-independent): hidden on lg+. */
+.navbar-toggler{display:none}
+.sd-bars{display:flex;flex-direction:column;gap:5px;width:22px}
+.sd-bars i{display:block;height:2px;border-radius:2px;background:#dbe6f7}
+/* lg+: the collapse fills the bar so brand/nav/actions keep desktop positions. */
+@media(min-width:992px){
+  .navbar .navbar-collapse{flex:1;display:flex;align-items:center;gap:24px}
+}
+/* Neutralize Bootstrap .navbar-brand leaks (brand keeps exact logo spacing). */
+.logo.navbar-brand{margin-right:0;padding-top:0;padding-bottom:0;color:inherit}
+.navbar-toggler:focus{box-shadow:none}
+.float-row{display:contents}
+/* Features use the Bootstrap grid; this keeps the approved max-width/centering. */
+.feat-grid{max-width:1250px;margin:0 auto;text-align:center}
+@media(max-width:1240px){
+  .navbar{padding:0 24px}
+  .main-nav ul{gap:26px}
+  .card-left{width:220px;left:-8px}
+  .card-rt,.card-rb{width:180px}
+}
+/* Below lg (991.98px): Bootstrap collapses the menu into the toggler panel. */
+@media(max-width:991.98px){
+  .navbar{height:auto;min-height:64px;padding:12px 16px;gap:10px}
+  .navbar-toggler{display:inline-flex;align-items:center;justify-content:center;min-width:44px;min-height:44px;padding:8px 10px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.16);border-radius:12px;cursor:pointer}
+  .navbar-collapse{position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:stretch;gap:6px;background:rgba(10,18,48,.98);border-bottom:1px solid var(--border-soft);box-shadow:0 24px 50px rgba(0,0,0,.5);padding:14px 20px 20px;z-index:60}
+  .main-nav ul{flex-direction:column;align-items:stretch;gap:2px}
+  .main-nav a{min-height:44px;padding:11px 4px;font-size:16px}
+  .main-nav a.is-active::after{bottom:2px}
+  .nav-right{flex-direction:column;align-items:stretch;gap:12px;margin-top:8px}
+  .lang-select{min-height:44px;justify-content:flex-start;font-size:15px}
+  .btn-now{justify-content:center;min-height:48px;width:100%}
+  .lang-menu{top:60px;right:16px;max-width:calc(100vw - 32px)}
+  .logo-word{font-size:21px}
+}
+/* Below 1024px: floating cards become a static centered row (never hidden,
+   never overflowing) instead of the desktop absolute composition. */
+@media(max-width:1023.98px){
+  .float-row{display:flex;justify-content:center;align-items:flex-start;gap:16px;flex-wrap:wrap;margin-top:30px;position:relative;z-index:5}
+  .float-card{position:static;transform:none;width:200px}
+  .float-card img{height:112px!important}
+  .play-lg,.play-sm{width:38px;height:38px}
+  .play-btn::after{border-left-width:11px;border-top-width:7px;border-bottom-width:7px}
+  .plat-badge{width:32px;height:32px;border-radius:9px}
+  .f-left .pbadge{right:-8px;top:-10px}
+  .f-right-top .pbadge,.f-right-bot .pbadge{transform:none}
+  .deco-arrow{display:none}
+}
+@media(max-width:767.98px){
+  .hero-sub{font-size:16px;padding:0 6px}
+  .hero-sub br{display:none}
+  .platforms{flex-wrap:wrap;gap:20px 0}
+  .platform{padding:0 22px}
+  .platform + .platform::before{display:none}
+  .wave svg{width:900px}
+  .features{padding:44px 22px 70px}
+}
+/* xs: stack the downloader, shrink the hero title (gradient preserved). */
+@media(max-width:575.98px){
+  .hero-title{font-size:clamp(40px,12.5vw,56px);letter-spacing:-1px}
+  .sd-badge{font-size:13px;padding:8px 18px;max-width:100%}
+  .downloader{flex-wrap:wrap;border-radius:26px;padding:14px}
+  .url-input{flex-basis:100%;padding:10px 8px;font-size:16px;min-height:44px}
+  .btn-dl{width:100%;justify-content:center;padding:14px;font-size:16px;min-height:52px}
+  .float-card{width:158px}
+  .float-card img{height:92px!important}
+  .duration{font-size:11px;padding:3px 7px}
+}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+
+/* ============ CONTENT PAGE (tokens identical to the homepage) ============ */
+main{display:flex;flex-direction:column}
+.page{width:100%;max-width:960px;margin:0 auto;padding:34px 24px 72px}
+.crumbs{font-size:13.5px;color:var(--muted-2);margin-bottom:18px;line-height:1.8}
+.crumbs a{color:var(--cyan)}
+.crumbs a:hover{text-decoration:underline}
+.crumbs .sep{margin:0 8px;color:#5b6b87}
+.page h1{font-size:clamp(30px,4.4vw,46px);font-weight:900;letter-spacing:-1.2px;line-height:1.08;margin-bottom:14px}
+.page .lede{font-size:18px;color:var(--muted);line-height:1.6;margin:0 0 18px;max-width:820px}
+.answer{font-size:16.5px;line-height:1.65;color:#d3dcec;background:rgba(42,169,248,.08);border:1px solid rgba(80,140,255,.4);border-radius:14px;padding:16px 18px;margin:0 0 6px}
+.answer strong{display:block;color:#fff;margin-bottom:4px}
+.answer em{font-style:normal;color:var(--cyan);font-weight:600}
+.page .downloader-wrap{max-width:872px;margin:26px 0 8px}
+.page .downloader{padding:10px 10px 10px 28px}
+.prose h2{font-size:22px;font-weight:800;letter-spacing:-.3px;margin:38px 0 10px;color:#fff}
+.prose h3{font-size:16.5px;font-weight:700;margin:22px 0 6px;color:#fff}
+.prose p,.prose li{color:var(--muted);font-size:16px;line-height:1.68}
+.prose p{margin:0 0 12px}
+.prose a{color:var(--cyan)}
+.prose a:hover{text-decoration:underline}
+.prose ul{margin:6px 0 16px 22px;padding:0}
+.prose li{margin-bottom:9px}
+.prose code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.9em;color:#dbe6f7;background:rgba(255,255,255,.07);border:1px solid var(--border-soft);border-radius:5px;padding:1px 6px;word-break:break-word}
+.prose kbd{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.82em;color:#e8eef8;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-bottom-width:2px;border-radius:5px;padding:2px 6px;white-space:nowrap}
+.steps{counter-reset:sd;list-style:none;margin:6px 0 18px;padding:0}
+.steps li{counter-increment:sd;position:relative;padding-left:44px;margin-bottom:14px}
+.steps li::before{content:counter(sd);position:absolute;left:0;top:1px;width:30px;height:30px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:800;color:#fff;background:linear-gradient(135deg,#1c2a8a,#2a1b7e);border:1px solid rgba(80,140,255,.6);box-shadow:0 0 16px rgba(60,120,255,.35)}
+.related{margin-top:18px}
+.related h2{margin-top:0}
+.related ul{list-style:none;display:flex;flex-wrap:wrap;gap:8px;margin:0;padding:0}
+.related a{display:inline-flex;align-items:center;min-height:44px;padding:10px 16px;border-radius:999px;font-size:14px;font-weight:600;color:#cdd7e8;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.14)}
+.related a:hover{color:#fff;border-color:rgba(90,160,255,.7)}
+@media(max-width:767.98px){
+  .page{padding:26px 18px 52px}
+  .page .lede{font-size:16.5px}
+  .prose h2{font-size:19.5px;margin-top:32px}
+  .prose p,.prose li{font-size:15.5px}
+  .page .downloader{padding:14px}
+}
+</style>
+<noscript><style>@media(max-width:767.98px){.foot-col .foot-links{max-height:none!important;visibility:visible!important}.foot-toggle{display:none!important}.foot-col h2 .foot-h{display:inline!important}}</style></noscript>
+</head>
+<body>
+<!-- ============ SHARED PAGE SHELL: header + main + footer ============ -->
+<a class="skip-link" href="#dlForm">Skip to downloader</a>
+
+<header class="site-header">
+  <div class="navbar navbar-expand-lg">
+    <a class="logo navbar-brand" href="/" aria-label="StartDownloading — home">
+      <span class="logo-mark" aria-hidden="true">
+        <svg width="15" height="16" viewBox="0 0 14 16" fill="none"><path d="M1 1.8v12.4c0 .9 1 1.5 1.8 1L13.4 9a1.2 1.2 0 0 0 0-2L2.8.8c-.8-.5-1.8.1-1.8 1z" fill="#fff"/></svg>
+      </span>
+      <span class="logo-word"><span class="w">Start</span><span class="g">Downloading</span></span>
+    </a>
+    <button class="navbar-toggler" id="menuToggler" type="button" aria-controls="mainMenu" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="sd-bars" aria-hidden="true"><i></i><i></i><i></i></span>
+    </button>
+    <div class="collapse navbar-collapse" id="mainMenu">
+    <nav class="main-nav mx-lg-auto" aria-label="Main navigation">
+      <ul>
+        <li><a href="/"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2fb3ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>Home</a></li>
+        <li><a href="/video-downloader"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2fb3ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>Video Downloader</a></li>
+        <li><a href="/knowledge"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2fb3ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>Knowledge Center</a></li>
+      </ul>
+    </nav>
+    <div class="nav-right ms-lg-3">
+      <button class="lang-select" id="langBtn" aria-haspopup="listbox" aria-expanded="false">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        <span id="langLabel">English</span>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <button class="sd-btn btn-now" id="ctaBtn" type="button">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Download Now
+      </button>
+    </div>
+    </div>
+  </div>
+  <div class="lang-menu" id="langMenu" role="listbox" aria-label="Language">
+    <button type="button" data-lang="English" data-href="/" role="option">English</button>
+    <button type="button" data-lang="Español" data-href="/es/" role="option">Español</button>
+    <button type="button" data-lang="Français" data-href="/fr/" role="option">Français</button>
+    <button type="button" data-lang="Deutsch" data-href="/de/" role="option">Deutsch</button>
+    <button type="button" data-lang="العربية" data-href="/ar/" role="option">العربية</button>
+    <button type="button" data-lang="हिन्दी" data-href="/hi/" role="option">हिन्दी</button>
+    <button type="button" data-lang="اردو" data-href="/ur/" role="option">اردو</button>
+    <button type="button" data-lang="Bahasa Indonesia" data-href="/id/" role="option">Bahasa Indonesia</button>
+  </div>
+</header>
+
+<!-- ================= MAIN ================= -->
+<main id="main">
+<div class="page">
+
+  <nav class="crumbs" aria-label="Breadcrumb">
+    <span><a href="/">Home</a></span><span class="sep" aria-hidden="true">›</span>
+    <span><span aria-current="false">Twitter / X</span></span><span class="sep" aria-hidden="true">›</span>
+    <span><span aria-current="page">Twitter Video Downloader</span></span>
+  </nav>
+
+  <h1>Twitter Video Downloader</h1>
+  <p class="lede">Save a video from a public X (formerly Twitter) post in your browser. Paste a twitter.com or x.com post link to see the formats the source actually provides, then download the one you want to your phone or computer.</p>
+
+
+  <!-- ================= DOWNLOADER (same component as index.html) ================= -->
+  <div class="downloader-wrap">
+    <form class="downloader" id="dlForm" action="#" autocomplete="off" novalidate>
+      <span class="link-icon" aria-hidden="true">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+      </span>
+      <input class="url-input" id="urlInput" type="url" inputmode="url" placeholder="Paste your X / Twitter post link here..." aria-label="Paste the link to a public X or Twitter post" aria-describedby="fieldStatus platformChip" aria-invalid="false" autocomplete="off" spellcheck="false">
+      <label class="sr-only" for="urlInput">X / Twitter post URL</label>
+      <button class="sd-btn btn-dl" id="dlBtn" type="submit" data-state="idle">
+        <svg class="btn-dl-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          <span class="btn-dl-label">Download</span>
+      </button>
+    </form>
+    <p class="field-status" id="fieldStatus" role="status" aria-live="polite" data-tone="idle"></p>
+    <p class="platform-chip" id="platformChip"><span class="dot" aria-hidden="true"></span><span id="platformChipText"></span></p>
+    <div class="dl-result" id="dlResult" hidden>
+      <a class="dl-save" id="dlSaveLink" download>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        <span id="dlSaveText">Save file</span>
+      </a>
+    </div>
+    <div class="video-result" id="videoResult" hidden>
+      <div class="vr-top">
+        <img class="vr-thumb" id="vrThumb" alt="" loading="lazy">
+        <div>
+          <div class="vr-title" id="vrTitle"></div>
+          <div class="vr-meta" id="vrMeta"></div>
+        </div>
+      </div>
+      <div class="vr-quality-label" id="vrQualityLabel">Choose quality</div>
+      <div class="vr-qualities" id="vrQualities" role="radiogroup" aria-label="Available qualities"></div>
+      <div class="vr-actions">
+        <button class="sd-btn vr-download" id="vrDownloadBtn" type="button">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          <span id="vrDownloadLabel">Download</span>
+        </button>
+      </div>
+      <p class="vr-note" id="vrNote"></p>
+      <p class="vr-err" id="vrError" role="alert" hidden></p>
+    </div>
+  </div>
+
+  <div class="prose">
+
+    <p class="answer"><strong>How does the Twitter/X video downloader work?</strong> Paste a public X or Twitter post link into the box above and press Download to analyze it. Pick a real format from the results, then press Download again to save the file. The tool reads only public posts and does not bypass protected accounts.</p>
+
+    <h2>How the Twitter/X video downloader works</h2>
+    <ol class="steps">
+      <li><strong>Copy a public post link.</strong> Open a single post that contains a video on x.com or twitter.com. The account and post must be public; protected and login-only posts cannot be processed.</li>
+      <li><strong>Paste it above and analyze.</strong> The server reads the public post and returns its real metadata and available formats. Nothing is downloaded until you pick an option.</li>
+      <li><strong>Choose a format.</strong> Each option shows the actual container, resolution, and file size. A <em>+ audio</em> label means a compatible audio track will be merged with the selected video stream.</li>
+      <li><strong>Download the file.</strong> Press Download again to prepare and save the file. The browser uses the post title for the filename and saves it to your usual downloads location.</li>
+      <li><strong>Open the saved file.</strong> Check your browser's downloads list if you cannot find it. The file plays in the default video player on the same device.</li>
+    </ol>
+
+    <h2>Twitter and X links this page accepts</h2>
+    <p>Both <code>twitter.com</code> and <code>x.com</code> links work, including addresses with <code>www</code>, <code>m</code>, or <code>mobile</code>. The same tool works as an X video downloader when the post link uses x.com. The link must point to an individual post and contain <code>/status/</code> followed by the post number. Profile pages, searches, hashtag pages, lists, and community links are not post links and cannot be analyzed. Text-only, photo-only, and other posts without a video have nothing to download.</p>
+    <p>For a broader walkthrough of public-post downloads, see <a href="/download-twitter-videos">download Twitter videos</a>. If you specifically need an MP4 file, the <a href="/twitter-mp4-downloader">Twitter MP4 downloader</a> covers that format and audio merging in more detail.</p>
+
+    <h2>What the downloader shows before you save</h2>
+    <p>The results panel uses the metadata returned for that post: title, thumbnail, duration, and the formats the source exposes. Quality labels are based on the real streams, so a lower-resolution post is not shown as a higher one. When the source offers separate video and audio streams, the options are labeled accordingly, and audio-only formats may appear for posts that provide them. The file extension shown in the results is the extension you receive; files are not renamed to a different container.</p>
+
+    <h2>Use it on iPhone, Android, Windows or Mac</h2>
+    <h3>iPhone and iPad</h3>
+    <p>The downloader runs in Safari or another browser, so no app is needed. Files usually land in <strong>Files, then Downloads</strong>. If iOS shows a share sheet, choose <em>Save to Files</em> and select a folder you can find later.</p>
+    <h3>Android</h3>
+    <p>Chrome and other browsers save the file to the <strong>Downloads</strong> folder. Open it from Files or from the browser's download list. Most Android galleries and video players open the saved file without extra software.</p>
+    <h3>Windows and Mac</h3>
+    <p>The file goes to your browser's default download folder. Press <kbd>Ctrl</kbd>+<kbd>J</kbd> on Windows or <kbd>&#8984;</kbd>+<kbd>Shift</kbd>+<kbd>J</kbd> on macOS to open the downloads list and confirm the filename and location.</p>
+
+    <h2>Why a Twitter/X download can fail</h2>
+    <ul>
+      <li><strong>The post is protected or login-only.</strong> Private accounts, follower-only posts, and members-only content are refused. Access controls are never bypassed.</li>
+      <li><strong>The post was deleted or the account was suspended.</strong> The video no longer exists for the server to read.</li>
+      <li><strong>The post has no video.</strong> Text, photo, and link-only posts have nothing to save. Photos are outside this tool's scope.</li>
+      <li><strong>The content is age-restricted or unavailable in your region.</strong> Restricted posts need a login that this tool does not use.</li>
+      <li><strong>The address is not a single post.</strong> Copy a link that contains <code>/status/</code> and the post number, not a profile, search, hashtag, list, or community page.</li>
+      <li><strong>The request was rate-limited or the upstream service refused it.</strong> Wait a minute and try again instead of sending repeated requests.</li>
+    </ul>
+
+    <h2>Privacy and temporary files</h2>
+    <p>The post link is sent to the StartDownloading server only to read the public post and prepare the selected file. You do not create an account, log in to X, or provide cookies. Prepared files are written to temporary storage and removed automatically about ten minutes after they are created. Server logs keep the hostname and outcome of a request rather than the full pasted URL, so the complete link is not written to disk as a record. No persistent copy is stored in your browser beyond the page itself.</p>
+
+    <h2>Copyright, permission and affiliation</h2>
+    <p>Download only content you are allowed to save: your own posts, or material the creator has licensed, published for reuse, or explicitly permitted you to download. X's Terms of Service require you to respect copyright and the creator's choices, and saving a file does not transfer any rights to you. Reposting or redistributing a downloaded video without permission can infringe the creator's copyright and the platform's rules.</p>
+    <p><strong>StartDownloading is not affiliated with, endorsed by, or sponsored by X Corp.</strong> "Twitter" and "X" are trademarks of their respective owner, used here only to describe which links the tool accepts.</p>
+
+    <h2>Frequently asked questions</h2>
+
+    <h3>Is this Twitter video downloader free?</h3>
+    <p>Yes. There is no account, subscription, or payment required. Normal rate limits still apply so the service stays available, and you can use the downloader as often as those limits allow.</p>
+
+    <h3>Does it work with both Twitter and X links?</h3>
+    <p>Yes. Links from twitter.com and x.com are accepted, including the www and mobile variants. The address must point to an individual post with /status/ and the post number, not to a profile, search, or hashtag page.</p>
+
+    <h3>Can I download a video from a private or protected account?</h3>
+    <p>No. The downloader only works with public posts. Protected accounts, follower-only posts, age-restricted content, and login-only pages are refused, and access controls are never bypassed.</p>
+
+    <h3>What formats and quality can I choose?</h3>
+    <p>You see the formats and resolutions the source actually provides, and each option shows its real container. Nothing is invented or upscaled. X commonly supplies MP4 video, audio-only options may appear, and a + audio label means the server will merge an audio track with that video stream.</p>
+
+    <h3>Why does a Twitter/X link return an error?</h3>
+    <p>Common causes are a private or deleted post, an age or region restriction, a post with no video, a profile or search link instead of a /status/ post, a rate limit, or a temporary upstream refusal. Check the link and try again later.</p>
+
+    <h3>Is the downloader safe, and do I need to log in?</h3>
+    <p>You never enter an X password, cookie, or login. The link is sent to the StartDownloading server only to read the public post, prepared files are temporary and removed automatically, and logs keep the hostname and outcome rather than the full URL. Save only content you have permission to use.</p>
+
+    <h3>Does it work on iPhone and Android?</h3>
+    <p>Yes. It runs in the browser on both platforms without an app. On iPhone and iPad the file normally goes to Files, then Downloads; if a share sheet appears, choose Save to Files. On Android, Chrome saves it to the Downloads folder.</p>
+
+    <h2>Related tools and guides</h2>
+    <div class="related"><ul>
+      <li><a href="/x-video-downloader">X Video Downloader for x.com post links</a></li>
+      <li><a href="/download-twitter-videos">Download Twitter videos from public posts</a></li>
+      <li><a href="/twitter-mp4-downloader">Twitter MP4 downloader for format-specific downloads</a></li>
+      <li><a href="/">StartDownloading home</a></li>
+    </ul></div>
+
+  </div>
+  </div>
+</div>
+</main>
+
+<!-- ================= GLOBAL FOOTER (identical to index.html) ================= -->
+<footer class="site-footer">
+  <nav aria-label="Footer">
+    <div class="foot-grid">
+      <div class="foot-col foot-brand">
+        <a class="logo foot-logo" href="/" aria-label="StartDownloading — home"><span class="logo-mark" aria-hidden="true"><svg width="15" height="16" viewBox="0 0 14 16" fill="none"><path d="M1 1.8v12.4c0 .9 1 1.5 1.8 1L13.4 9a1.2 1.2 0 0 0 0-2L2.8.8c-.8-.5-1.8.1-1.8 1z" fill="#fff"/></svg></span><span class="logo-word">Start<span class="g">Downloading</span></span></a>
+        <p>Fast, simple and free video downloading tools.</p>
+        <ul class="foot-links" id="hfl-brand">
+          <li><a href="/" data-foot-link>Home</a></li>
+          <li><a href="/video-downloader" data-foot-link>Video Downloader</a></li>
+        </ul>
+      </div>
+      <div class="foot-col" data-col="youtube">
+        <h2><button class="foot-toggle" type="button" aria-expanded="true" aria-controls="hfl-youtube">YouTube<span class="chev" aria-hidden="true">⌄</span></button><span class="foot-h" aria-hidden="true">YouTube</span></h2>
+        <ul class="foot-links" id="hfl-youtube">
+          <li><a href="/youtube-downloader" data-foot-link>YouTube Downloader</a></li>
+          <li><a href="/youtube-video-downloader" data-foot-link>YouTube Video Downloader</a></li>
+          <li><a href="/youtube-to-mp4" data-foot-link>YouTube to MP4</a></li>
+          <li><a href="/youtube-shorts-downloader" data-foot-link>YouTube Shorts Downloader</a></li>
+          <li><a href="/youtube-playlist-downloader" data-foot-link>YouTube Playlist Downloader</a></li>
+          <li><a href="/youtube-to-mp3" data-foot-link>YouTube to MP3</a></li>
+        </ul>
+      </div>
+      <div class="foot-col" data-col="tiktok">
+        <h2><button class="foot-toggle" type="button" aria-expanded="true" aria-controls="hfl-tiktok">TikTok<span class="chev" aria-hidden="true">⌄</span></button><span class="foot-h" aria-hidden="true">TikTok</span></h2>
+        <ul class="foot-links" id="hfl-tiktok">
+          <li><a href="/tiktok-downloader" data-foot-link>TikTok Downloader</a></li>
+          <li><a href="/tiktok-video-downloader" data-foot-link>TikTok Video Downloader</a></li>
+          <li><a href="/tiktok-no-watermark" data-foot-link>TikTok No Watermark</a></li>
+          <li><a href="/tiktok-mp4" data-foot-link>TikTok MP4</a></li>
+          <li><a href="/tiktok-mp3" data-foot-link>TikTok MP3</a></li>
+          <li><a href="/tiktok-photo-downloader" data-foot-link>TikTok Photo Downloader</a></li>
+        </ul>
+      </div>
+      <div class="foot-col" data-col="instagram">
+        <h2><button class="foot-toggle" type="button" aria-expanded="true" aria-controls="hfl-instagram">Instagram<span class="chev" aria-hidden="true">⌄</span></button><span class="foot-h" aria-hidden="true">Instagram</span></h2>
+        <ul class="foot-links" id="hfl-instagram">
+          <li><a href="/instagram-downloader" data-foot-link>Instagram Downloader</a></li>
+          <li><a href="/instagram-video-downloader" data-foot-link>Instagram Video Downloader</a></li>
+          <li><a href="/instagram-reels-downloader" data-foot-link>Instagram Reels Downloader</a></li>
+          <li><a href="/instagram-story-downloader" data-foot-link>Instagram Story Downloader</a></li>
+          <li><a href="/instagram-photo-downloader" data-foot-link>Instagram Photo Downloader</a></li>
+          <li><a href="/instagram-thumbnail-downloader" data-foot-link>Instagram Thumbnail Downloader</a></li>
+        </ul>
+      </div>
+      <div class="foot-col" data-col="twitter">
+        <h2><button class="foot-toggle" type="button" aria-expanded="true" aria-controls="hfl-twitter">Twitter / X<span class="chev" aria-hidden="true">⌄</span></button><span class="foot-h" aria-hidden="true">Twitter / X</span></h2>
+        <ul class="foot-links" id="hfl-twitter">
+          <li><a href="/twitter-video-downloader" data-foot-link aria-current="page">Twitter Video Downloader</a></li>
+          <li><a href="/x-video-downloader" data-foot-link>X Video Downloader</a></li>
+          <li><a href="/twitter-gif-downloader" data-foot-link>Twitter GIF Downloader</a></li>
+          <li><a href="/twitter-mp4-downloader" data-foot-link>Twitter MP4 Downloader</a></li>
+          <li><a href="/download-twitter-videos" data-foot-link>Download Twitter Videos</a></li>
+        </ul>
+      </div>
+      <div class="foot-col" data-col="knowledge">
+        <h2><button class="foot-toggle" type="button" aria-expanded="true" aria-controls="hfl-knowledge">Knowledge Center<span class="chev" aria-hidden="true">⌄</span></button><span class="foot-h" aria-hidden="true">Knowledge Center</span></h2>
+        <ul class="foot-links" id="hfl-knowledge">
+          <li><a href="/knowledge/how-to-guides" data-foot-link>How-To Guides</a></li>
+          <li><a href="/knowledge/video-guides" data-foot-link>Video Guides</a></li>
+          <li><a href="/knowledge/formats-quality" data-foot-link>Formats &amp; Quality</a></li>
+          <li><a href="/knowledge/troubleshooting" data-foot-link>Troubleshooting</a></li>
+          <li><a href="/knowledge/guides" data-foot-link>Guides</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="foot-bottom"><div class="foot-bottom-in"><span>© <span id="footYear">2026</span> StartDownloading. All rights reserved.</span></div>
+  </div>
+</footer>
+<script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+/* ============================================================
+   Twitter/X downloader page — same client conventions as index.html.
+   STAGE 1  POST /api/video/info     { url }              -> real metadata + real formats
+   STAGE 2  POST /api/video/download { url, formatId }    -> real file for that format
+   Frontend validation is preliminary only; the backend re-validates
+   authoritatively. No fake downloads: success is only shown for real
+   backend-produced files.
+   ============================================================ */
+(function () {
+  'use strict';
+
+  /* ---------- 1. URL utilities (same helpers as the homepage) ---------- */
+  // Host allowlist mirrors the backend twitter platform exactly:
+  // /^(www\.|m\.|mobile\.)?(twitter\.com|x\.com)$/ in src/platforms/index.js
+  var TWITTER_HOST = /^(www\.|m\.|mobile\.)?(twitter\.com|x\.com)$/;
+  var STATUS_PATH = /\/(i\/)?status\/\d+/;
+
+  function normalizeUrl(raw) {
+    var s = String(raw == null ? '' : raw).replace(/[\s\u200B-\u200D\uFEFF]+/g, ' ').trim();
+    if (!s) return '';
+    if (!/^[a-zA-Z][a-zA-Z0-9+.-]*:/.test(s)) s = 'https://' + s;
+    try {
+      var u = new URL(s);
+      u.hostname = u.hostname.toLowerCase();
+      return u.toString();
+    } catch (err) {
+      return s;
+    }
+  }
+
+  function parseHost(raw) {
+    try {
+      return (new URL(normalizeUrl(raw)).hostname || '').toLowerCase();
+    } catch (err) {
+      return '';
+    }
+  }
+
+  // True only for the hosts this page is about.
+  function isTwitterHost(raw) {
+    return TWITTER_HOST.test(parseHost(raw));
+  }
+
+  // Recognised by the backend, used only to give a helpful "wrong tool" message.
+  function detectPlatform(raw) {
+    var host = parseHost(raw);
+    if (/(^|\.)(youtube\.com|youtu\.be|music\.youtube\.com|m\.youtube\.com)$/.test(host)) return 'youtube';
+    if (/(^|\.)(tiktok\.com|vt\.tiktok\.com|vm\.tiktok\.com|m\.tiktok\.com)$/.test(host)) return 'tiktok';
+    if (/(^|\.)(instagram\.com|instagr\.am|m\.instagram\.com)$/.test(host)) return 'instagram';
+    if (TWITTER_HOST.test(host)) return 'twitter';
+    return 'unknown';
+  }
+
+  function isValidHttpUrl(raw) {
+    try {
+      var u = new URL(normalizeUrl(raw));
+      return (u.protocol === 'http:' || u.protocol === 'https:') && u.hostname.indexOf('.') > 0;
+    } catch (err) {
+      return false;
+    }
+  }
+
+  function hasStatusPath(raw) {
+    try {
+      return STATUS_PATH.test(new URL(normalizeUrl(raw)).pathname);
+    } catch (err) {
+      return false;
+    }
+  }
+
+  /* ---------- 2. Backend API client (same as the homepage) ---------- */
+  function escHtml(s) {
+    return String(s == null ? '' : s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+  }
+
+  var API_BASE = 'https://api.startdownloading.com'; // Railway backend — cross-origin from startdownloading.com
+
+  function postJson(urlPath, body, timeoutMs) {
+    var controller = null;
+    var timeoutId = null;
+    try {
+      controller = new AbortController();
+      timeoutId = setTimeout(function () { controller.abort(); }, timeoutMs || 130000);
+    } catch (e) { controller = null; }
+    return fetch(API_BASE + urlPath, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(body),
+      signal: controller ? controller.signal : undefined,
+    }).then(function (res) {
+      if (timeoutId) clearTimeout(timeoutId);
+      return res.json().then(function (data) {
+        return { status: res.status, data: data || {} };
+      }).catch(function () {
+        return { status: res.status, data: {} };
+      });
+    }).catch(function (err) {
+      if (timeoutId) clearTimeout(timeoutId);
+      if (err && err.name === 'AbortError') {
+        return { status: 0, data: { success: false, error: { code: 'PROCESSING_TIMEOUT', message: '' } } };
+      }
+      return { status: 0, data: { success: false, error: { code: 'NETWORK_ERROR', message: '' } } };
+    });
+  }
+
+  var DownloaderService = {
+    // STAGE 1: real metadata + real formats.
+    analyze: function (normalizedUrl) { return postJson('/api/video/info', { url: normalizedUrl }, 100000); },
+    // STAGE 2: real file for the chosen format.
+    downloadSelected: function (normalizedUrl, formatId) { return postJson('/api/video/download', { url: normalizedUrl, formatId: formatId }, 130000); }
+  };
+
+  var ERROR_COPY = {
+    INVALID_REQUEST: 'Please enter a valid X or Twitter post link.',
+    INVALID_URL: 'That link doesn\u2019t look like a valid URL. Please check it and try again.',
+    UNSUPPORTED_PLATFORM: 'This page only handles X and Twitter post links.',
+    PRIVATE_CONTENT: 'This post isn\u2019t publicly available. Protected, login-only or age-restricted posts can\u2019t be downloaded.',
+    UPSTREAM_REJECTED: 'X is refusing requests from our server right now. Please try again in a minute.',
+    VIDEO_PRIVATE: 'This post isn\u2019t publicly available. Protected, login-only or age-restricted posts can\u2019t be downloaded.',
+    VIDEO_NOT_FOUND: 'This post or video was not found — it may have been deleted.',
+    VIDEO_UNAVAILABLE: 'This video is currently unavailable.',
+    FORMAT_NOT_AVAILABLE: 'That quality is no longer available. Please choose another one.',
+    DOWNLOAD_FAILED: 'We couldn\u2019t process this video. Please try again.',
+    MERGE_FAILED: 'Merging the audio track failed. Please try a lower quality.',
+    PROCESSING_FAILED: 'We couldn\u2019t read a video from that post. Check that the post is public and really contains a video, then try again.',
+    PROCESSING_TIMEOUT: 'The request took too long and was stopped. Please try again.',
+    OUTPUT_TOO_LARGE: 'The resulting file is too large to download.',
+    FILE_TOO_LARGE: 'The resulting file is too large to download.',
+    TEMPORARY_FAILURE: 'Something went wrong on our side. Please try again.',
+    RATE_LIMITED: 'Too many requests in a short time. Please wait a minute and try again.',
+    NETWORK_ERROR: 'Couldn\u2019t reach the download service. Check your connection and try again.',
+    SERVER_ERROR: 'Something went wrong. Please try again.'
+  };
+
+  /* ---------- 3. Localized form state ---------- */
+  var state = { url: '', detectedPlatform: 'unknown', validationError: '', status: 'IDLE', loading: false };
+
+  var form = document.getElementById('dlForm');
+  // #dlForm IS the `.downloader` bar itself — bind the bar state directly to the form.
+  var bar = form;
+  var input = document.getElementById('urlInput');
+  var btn = document.getElementById('dlBtn');
+  var btnLabel = btn.querySelector('.btn-dl-label');
+  var btnIcon = btn.querySelector('.btn-dl-icon');
+  var statusEl = document.getElementById('fieldStatus');
+  var chip = document.getElementById('platformChip');
+  var chipText = document.getElementById('platformChipText');
+  var spinner = document.createElement('span');
+  spinner.className = 'spinner';
+  spinner.setAttribute('aria-hidden', 'true');
+
+  var PLATFORM_NAMES = { youtube: 'YouTube', tiktok: 'TikTok', instagram: 'Instagram', twitter: 'Twitter / X', unknown: 'Unknown' };
+  var LABELS = { IDLE: 'Download', VALIDATING: 'Checking\u2026', READY: 'Download', ERROR: 'Download', LOADING: 'Preparing\u2026', ANALYZING: 'Analyzing\u2026', PREPARING: 'Preparing\u2026' };
+
+  var announcedTimer = null;
+  var slowTimer = null;
+  var dlResult = document.getElementById('dlResult');
+  var dlSaveLink = document.getElementById('dlSaveLink');
+  var dlSaveText = document.getElementById('dlSaveText');
+  var videoResult = document.getElementById('videoResult');
+  var vrThumb = document.getElementById('vrThumb');
+  var vrTitle = document.getElementById('vrTitle');
+  var vrMeta = document.getElementById('vrMeta');
+  var vrQualities = document.getElementById('vrQualities');
+  var vrDownloadBtn = document.getElementById('vrDownloadBtn');
+  var vrDownloadLabel = document.getElementById('vrDownloadLabel');
+  var vrNote = document.getElementById('vrNote');
+  var vrError = document.getElementById('vrError');
+  var currentAnalysis = null;
+  var selectedFormatId = null;
+  var downloading = false;
+
+  function setStatus(status, message, tone) {
+    state.status = status;
+    btn.dataset.state = status.toLowerCase();
+    btnLabel.textContent = LABELS[status] || 'Download';
+    statusEl.textContent = message || '';
+    statusEl.dataset.tone = tone || 'idle';
+  }
+
+  function setLoading(on) {
+    state.loading = on;
+    btn.disabled = on;
+    btn.setAttribute('aria-busy', on ? 'true' : 'false');
+    if (slowTimer) { clearTimeout(slowTimer); slowTimer = null; }
+    if (on) {
+      btnLabel.textContent = LABELS.LOADING;
+      btn.insertBefore(spinner, btnLabel);
+      if (btnIcon) btnIcon.style.display = 'none';
+    } else if (spinner.parentNode === btn) {
+      btn.removeChild(spinner);
+      if (btnIcon) btnIcon.style.display = '';
+    }
+  }
+
+  function showChip(platform) {
+    if (platform === 'twitter') {
+      chipText.textContent = 'Twitter / X post link detected.';
+      chip.classList.add('is-visible');
+    } else {
+      chip.classList.remove('is-visible');
+      chipText.textContent = '';
+    }
+  }
+
+  function setInvalid(message) {
+    state.validationError = message;
+    input.setAttribute('aria-invalid', 'true');
+    if (bar) {
+      bar.classList.remove('is-empty');
+      bar.classList.add('has-error');
+    }
+    setStatus('ERROR', message, 'error');
+  }
+
+  function clearError() {
+    state.validationError = '';
+    input.setAttribute('aria-invalid', 'false');
+    if (bar) {
+      bar.classList.remove('has-error');
+      bar.classList.remove('is-empty');
+    }
+  }
+
+  /* Returns { ok, platform, normalized, error } — preliminary only.
+     error: empty | invalid | unsupported | other-platform | not-a-post */
+  function validate(rawValue) {
+    var trimmed = String(rawValue == null ? '' : rawValue).trim();
+    if (!trimmed) return { ok: false, error: 'empty', platform: 'unknown', normalized: '' };
+    if (!isValidHttpUrl(trimmed)) return { ok: false, error: 'invalid', platform: 'unknown', normalized: '' };
+    var normalized = normalizeUrl(trimmed);
+    var platform = detectPlatform(normalized);
+    if (platform === 'unknown') return { ok: false, error: 'unsupported', platform: platform, normalized: normalized };
+    if (platform !== 'twitter') return { ok: false, error: 'other-platform', platform: platform, normalized: normalized };
+    if (!hasStatusPath(normalized)) return { ok: false, error: 'not-a-post', platform: platform, normalized: normalized };
+    return { ok: true, error: '', platform: platform, normalized: normalized };
+  }
+
+  function formatBytes(n) {
+    if (n == null || !(n > 0)) return null;
+    if (n < 1024) return n + ' B';
+    var units = ['KB', 'MB', 'GB'];
+    var v = n; var u = -1;
+    do { v = v / 1024; u += 1; } while (v >= 1024 && u < units.length - 1);
+    return (v >= 100 ? Math.round(v) : v.toFixed(1)) + ' ' + units[u];
+  }
+
+  function friendlyError(code) { return ERROR_COPY[code] || ERROR_COPY.SERVER_ERROR; }
+
+  function showVideoError(msg) {
+    vrError.textContent = msg;
+    vrError.hidden = false;
+  }
+
+  function hideResult() {
+    dlResult.hidden = true;
+    dlSaveLink.removeAttribute('href');
+    dlSaveLink.removeAttribute('download');
+    videoResult.hidden = true;
+    vrError.hidden = true;
+    vrError.textContent = '';
+    vrQualities.innerHTML = '';
+    currentAnalysis = null;
+    selectedFormatId = null;
+  }
+
+  function showResult(downloadUrl, filename) {
+    dlSaveLink.href = API_BASE + downloadUrl;
+    dlSaveLink.setAttribute('download', filename || 'video');
+    dlSaveText.textContent = 'Save ' + (filename || 'file');
+    dlResult.hidden = false;
+  }
+
+  function renderAnalysis(normalized, platform, info) {
+    currentAnalysis = { normalized: normalized, platform: platform, info: info };
+    vrThumb.src = info.thumbnail || '';
+    vrThumb.alt = info.title ? ('Thumbnail for the post "' + info.title + '"') : 'Thumbnail preview of the X post video';
+    vrThumb.style.display = info.thumbnail ? '' : 'none';
+    vrTitle.textContent = info.title || 'Untitled post';
+    var metaParts = [];
+    metaParts.push('<strong>' + PLATFORM_NAMES[platform] + '</strong>');
+    if (info.duration) metaParts.push('Duration: ' + info.duration);
+    if (info.uploader) metaParts.push(escHtml(info.uploader));
+    vrMeta.innerHTML = metaParts.join(' &nbsp;•&nbsp; ');
+    vrQualities.innerHTML = '';
+    selectedFormatId = null;
+    info.formats.forEach(function (f, idx) {
+      var label = document.createElement('label');
+      label.className = 'vr-q';
+      var radio = document.createElement('input');
+      radio.type = 'radio';
+      radio.name = 'vr-quality';
+      radio.value = f.formatId;
+      if (idx === 0) { radio.checked = true; selectedFormatId = f.formatId; }
+      radio.addEventListener('change', function () { selectedFormatId = radio.value; vrError.hidden = true; });
+      var pill = document.createElement('span');
+      pill.textContent = (f.qualityLabel || f.quality || f.formatId) + ' ' + (f.extension || '').toUpperCase();
+      var size = formatBytes(f.filesize);
+      if (size) {
+        var sm = document.createElement('small');
+        sm.textContent = size;
+        pill.appendChild(sm);
+      }
+      if (f.needsMerge) {
+        var mg = document.createElement('small');
+        mg.textContent = '+ audio';
+        pill.appendChild(mg);
+      }
+      label.appendChild(radio);
+      label.appendChild(pill);
+      vrQualities.appendChild(label);
+    });
+    vrNote.textContent = info.formats.length + ' real quality option' + (info.formats.length === 1 ? '' : 's') + ' found — select one, then press Download.';
+    videoResult.hidden = false;
+  }
+
+  function handleInfoResponse(res, normalized, platform) {
+    var data = (res && res.data) || {};
+    if (res.status === 200 && data.success && data.data && Array.isArray(data.data.formats)) {
+      setLoading(false);
+      clearError();
+      showChip(platform);
+      renderAnalysis(normalized, data.data.platform || platform, data.data);
+      setStatus('READY', 'Video found — choose a quality, then press Download below.', 'ok');
+      input.focus();
+      return;
+    }
+    var code = (data.error && data.error.code) || 'SERVER_ERROR';
+    setLoading(false);
+    hideResult();
+    if (code === 'UNSUPPORTED_PLATFORM' || code === 'PRIVATE_CONTENT' || code === 'VIDEO_PRIVATE' || code === 'INVALID_URL' || code === 'INVALID_REQUEST') {
+      setInvalid(friendlyError(code));
+    } else {
+      input.setAttribute('aria-invalid', 'false');
+      if (bar) bar.classList.remove('has-error');
+      setStatus('ERROR', friendlyError(code), 'error');
+    }
+    showChip('unknown');
+    input.focus();
+  }
+
+  function setVrDownloading(on, label) {
+    downloading = on;
+    vrDownloadBtn.disabled = on;
+    vrDownloadBtn.setAttribute('aria-busy', on ? 'true' : 'false');
+    vrDownloadLabel.textContent = label || (on ? 'Preparing\u2026' : 'Download');
+  }
+
+  function triggerBlobDownload(downloadUrl, filename) {
+    return fetch(API_BASE + downloadUrl).then(function (res) {
+      if (!res.ok) throw new Error('file-' + res.status);
+      return res.blob().then(function (blob) {
+        var objectUrl = URL.createObjectURL(blob);
+        var a = document.createElement('a');
+        a.href = objectUrl;
+        a.download = filename || 'video';
+        document.body.appendChild(a);
+        a.click();
+        setTimeout(function () { URL.revokeObjectURL(objectUrl); a.remove(); }, 5000);
+      });
+    });
+  }
+
+  function handleDownloadResponse(res) {
+    var data = (res && res.data) || {};
+    if (res.status === 200 && data.success && data.downloadUrl) {
+      showResult(data.downloadUrl, data.filename);
+      setStatus('READY', 'Download ready — your file has started downloading.', 'ok');
+      vrNote.textContent = 'Download ready (' + (data.quality || 'selected quality') + '). If it didn\u2019t start, use the Save link above.';
+      triggerBlobDownload(data.downloadUrl, data.filename).catch(function () {
+        // Fallback: the Save link points at the same file URL.
+        try { dlSaveLink.click(); } catch (e) { /* user can click manually */ }
+      });
+      setVrDownloading(false, 'Download');
+      setLoading(false);
+      input.focus();
+      return;
+    }
+    var code = (data.error && data.error.code) || 'SERVER_ERROR';
+    setVrDownloading(false, 'Download');
+    setLoading(false);
+    showVideoError(friendlyError(code));
+    setStatus('ERROR', friendlyError(code), 'error');
+    input.focus();
+  }
+
+  function handleSubmit() {
+    if (state.loading) return; // prevent duplicate actions
+    var result = validate(input.value);
+    state.url = input.value.trim();
+    state.detectedPlatform = result.platform;
+    hideResult();
+    if (!result.ok) {
+      if (result.error === 'empty') {
+        clearError();
+        if (bar) {
+          bar.classList.add('has-error');
+          setStatus('ERROR', 'Please paste the link to the X post first.', 'error');
+          bar.classList.remove('is-empty');
+          void bar.offsetWidth;
+          bar.classList.add('is-empty');
+        } else {
+          setStatus('ERROR', 'Please paste the link to the X post first.', 'error');
+        }
+      } else if (result.error === 'invalid') {
+        setInvalid('That link doesn\u2019t look like a valid URL. Please check it and try again.');
+      } else if (result.error === 'unsupported') {
+        setInvalid('Paste an x.com or twitter.com post link — this page only handles X and Twitter posts.');
+      } else if (result.error === 'other-platform') {
+        setInvalid('That is a ' + PLATFORM_NAMES[result.platform] + ' link. This page is the Twitter/X downloader — use the main Video Downloader for other platforms.');
+      } else {
+        setInvalid('That is an X page, but not a single post. Copy the link to the post itself — it contains /status/ and a number.');
+      }
+      showChip('unknown');
+      input.focus();
+      return;
+    }
+    clearError();
+    showChip(result.platform);
+    // STAGE 1 — ANALYZE: real backend request (indeterminate, no fake %).
+    setStatus('ANALYZING', 'Analyzing post\u2026', 'info');
+    btnLabel.textContent = LABELS.ANALYZING;
+    setLoading(true);
+    slowTimer = setTimeout(function () {
+      if (state.loading) setStatus('LOADING', 'Still analyzing — X can be slow to answer, please wait.', 'info');
+    }, 8000);
+    if (announcedTimer) clearTimeout(announcedTimer);
+    announcedTimer = setTimeout(function () {
+      DownloaderService.analyze(result.normalized).then(function (res) {
+        handleInfoResponse(res, result.normalized, result.platform);
+      });
+    }, 250);
+  }
+
+  vrDownloadBtn.addEventListener('click', function () {
+    if (downloading || !currentAnalysis || !selectedFormatId) return;
+    vrError.hidden = true;
+    setVrDownloading(true, 'Preparing your download\u2026');
+    setStatus('PREPARING', 'Preparing your download\u2026', 'info');
+    DownloaderService.downloadSelected(currentAnalysis.normalized, selectedFormatId).then(handleDownloadResponse);
+  });
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault(); // never navigate/reload
+    handleSubmit();
+  });
+
+  // Live correction: typing/paste clears stale errors; chip updates (no auto-download).
+  var typeTimer = null;
+  function handleChange() {
+    if (state.loading || downloading) return;
+    var v = input.value;
+    try {
+      if (!currentAnalysis || normalizeUrl(v) !== currentAnalysis.normalized) hideResult();
+    } catch (e) { hideResult(); }
+    if (!v.trim()) {
+      clearError();
+      showChip('unknown');
+      setStatus('IDLE', '', 'idle');
+      return;
+    }
+    if (state.validationError) {
+      var r = validate(v);
+      if (r.ok) {
+        clearError();
+        state.detectedPlatform = r.platform;
+        showChip(r.platform);
+        setStatus('READY', 'Post link looks good — press Download when ready.', 'ok');
+      }
+    } else if (isValidHttpUrl(v)) {
+      var p = detectPlatform(v);
+      showChip(p);
+      state.detectedPlatform = p;
+      if (p === 'twitter' && state.status === 'IDLE') {
+        setStatus('READY', 'Twitter / X post link detected.', 'info');
+      }
+    } else {
+      showChip('unknown');
+    }
+  }
+  input.addEventListener('input', function () {
+    if (typeTimer) clearTimeout(typeTimer);
+    typeTimer = setTimeout(handleChange, 120);
+  });
+  input.addEventListener('paste', function () {
+    // Let the paste land first, then reflect it. Never auto-submit.
+    setTimeout(handleChange, 0);
+  });
+
+  /* ---------- 4b. Mobile menu (Bootstrap Collapse, graceful fallback) ---------- */
+  var menuToggler = document.getElementById('menuToggler');
+  var menu = document.getElementById('mainMenu');
+  function bsCollapse() {
+    // Lazily constructed: the bundle is deferred, so window.bootstrap may
+    // not exist when this inline script first runs.
+    if (window.bootstrap && window.bootstrap.Collapse) {
+      return new window.bootstrap.Collapse(menu, { toggle: false });
+    }
+    return null;
+  }
+  var menuApi = null;
+  function setMenu(open) {
+    if (!menuApi) menuApi = bsCollapse();
+    if (menuApi) {
+      if (open) menuApi.show(); else menuApi.hide();
+    } else {
+      menu.classList.toggle('show', open);
+      menuToggler.setAttribute('aria-expanded', String(open));
+    }
+  }
+  function closeMenu() {
+    if (!menu.classList.contains('show')) return;
+    setMenu(false);
+  }
+  menuToggler.addEventListener('click', function () {
+    setMenu(!menu.classList.contains('show'));
+  });
+  if (menu) {
+    menu.addEventListener('shown.bs.collapse', function () { menuToggler.setAttribute('aria-expanded', 'true'); });
+    menu.addEventListener('hidden.bs.collapse', function () { menuToggler.setAttribute('aria-expanded', 'false'); });
+  }
+  document.querySelectorAll('#mainMenu a').forEach(function (a) {
+    a.addEventListener('click', closeMenu);
+  });
+
+  /* ---------- 4. Navigation ---------- */
+  var ctaBtn = document.getElementById('ctaBtn');
+  ctaBtn.addEventListener('click', function () {
+    closeMenu();
+    document.getElementById('dlForm').scrollIntoView({ behavior: 'smooth', block: 'center' });
+    setTimeout(function () { input.focus({ preventScroll: true }); }, 450);
+  });
+
+  /* ---------- 5. Language dropdown (accessible, visual only) ---------- */
+  var langBtn = document.getElementById('langBtn');
+  var langMenu = document.getElementById('langMenu');
+  var langLabel = document.getElementById('langLabel');
+  var langOptions = Array.prototype.slice.call(langMenu.querySelectorAll('button'));
+  var langIndex = 0;
+  function setLangOpen(open) {
+    langMenu.classList.toggle('open', open);
+    langBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  }
+  langBtn.addEventListener('click', function (e) {
+    e.stopPropagation();
+    setLangOpen(!langMenu.classList.contains('open'));
+    if (langMenu.classList.contains('open')) langOptions[langIndex].focus();
+  });
+  document.addEventListener('click', function () { setLangOpen(false); });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') setLangOpen(false);
+  });
+  langMenu.addEventListener('keydown', function (e) {
+    if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
+      e.preventDefault();
+      langIndex = e.key === 'ArrowDown'
+        ? (langIndex + 1) % langOptions.length
+        : (langIndex - 1 + langOptions.length) % langOptions.length;
+      langOptions[langIndex].focus();
+    }
+  });
+  langOptions.forEach(function (b, i) {
+    b.addEventListener('click', function () {
+      langIndex = i;
+      // This page has no localized version: only the English locale hosts it.
+      window.location.href = b.dataset.href || '/';
+    });
+  });
+
+  /* ---------- 6. Global footer: accordion (mobile), current page, year ---------- */
+  (function initFooter() {
+    var yearEl = document.getElementById('footYear');
+    if (yearEl) yearEl.textContent = String(new Date().getFullYear());
+    var path = '';
+    try { path = window.location.pathname || '/'; } catch (e) { path = '/'; }
+    Array.prototype.forEach.call(document.querySelectorAll('[data-foot-link]'), function (a) {
+      var href = a.getAttribute('href');
+      if (!href) return;
+      if (href !== '/' && (path === href || path === href + '/' || path === href + '/index.html')) a.setAttribute('aria-current', 'page');
+      else if (href === '/' && (path === '/' || path === '/index.html')) a.setAttribute('aria-current', 'page');
+    });
+    // Single-open accordion state (mobile): opening one section closes the
+    // previous; clicking the open section closes it. Desktop keeps all open.
+    var activeSection = null;
+    function setActiveFoot(id) {
+      activeSection = id;
+      Array.prototype.forEach.call(document.querySelectorAll('.foot-col[data-col]'), function (c) {
+        var open = !!(id && c.getAttribute('data-col') === id);
+        c.classList.toggle('open', open);
+        var b = c.querySelector('.foot-toggle');
+        if (b) b.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+    }
+    function fitFoot() {
+      var small = false;
+      try { small = window.matchMedia('(max-width:767.98px)').matches; } catch (e) { small = false; }
+      if (!small) {
+        Array.prototype.forEach.call(document.querySelectorAll('.foot-col[data-col]'), function (c) {
+          c.classList.add('open');
+          var b = c.querySelector('.foot-toggle');
+          if (b) b.setAttribute('aria-expanded', 'true');
+        });
+      } else {
+        setActiveFoot(activeSection);
+      }
+    }
+    Array.prototype.forEach.call(document.querySelectorAll('.foot-col[data-col] .foot-toggle'), function (b) {
+      b.addEventListener('click', function () {
+        var c = b.parentNode;
+        while (c && !(c.classList && c.classList.contains('foot-col'))) c = c.parentNode;
+        if (!c) return;
+        var id = c.getAttribute('data-col');
+        setActiveFoot(activeSection === id ? null : id);
+      });
+    });
+    fitFoot();
+    window.addEventListener('resize', fitFoot);
+  })();
+
+  // Expose internals for testing/debugging (no secrets — validation is client-side only).
+  window.StartDownloading = window.StartDownloading || {};
+  window.StartDownloading.detectPlatform = detectPlatform;
+  window.StartDownloading.normalizeUrl = normalizeUrl;
+  window.StartDownloading.validate = validate;
+  window.StartDownloading.errorFor = function (code) { return ERROR_COPY[code] || ERROR_COPY.SERVER_ERROR; };
+  window.StartDownloading.getState = function () { return Object.assign({}, state); };
+})();
+</script>
+</body>
+</html>
